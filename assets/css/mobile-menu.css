@@ -1,0 +1,418 @@
+/**
+ * Mobile Menu Styles - RTL/LTR Compatible
+ * Tablet & Mobile Responsive
+ */
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    z-index: 9999 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
+}
+
+.mobile-menu-overlay.active,
+.mobile-menu-overlay.open {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Mobile Menu Wrapper */
+.mobile-menu-wrapper {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 320px !important;
+    max-width: 85vw !important;
+    height: 100% !important;
+    background: #ffffff !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    direction: rtl !important;
+    overflow-y: auto !important;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.mobile-menu-overlay.active .mobile-menu-wrapper,
+.mobile-menu-overlay.open .mobile-menu-wrapper {
+    transform: translateX(0) !important;
+}
+
+/* RTL adjustments */
+[dir="ltr"] .mobile-menu-wrapper {
+    right: auto !important;
+    left: 0 !important;
+    transform: translateX(-100%) !important;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+[dir="ltr"] .mobile-menu-overlay.active .mobile-menu-wrapper,
+[dir="ltr"] .mobile-menu-overlay.open .mobile-menu-wrapper {
+    transform: translateX(0) !important;
+}
+
+/* Mobile Menu Header */
+.mobile-menu-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 1.5rem !important;
+    background: linear-gradient(135deg, #1FA547, #2FD65A) !important;
+    color: white !important;
+}
+
+.mobile-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+}
+
+.mobile-logo {
+    width: 32px !important;
+    height: 32px !important;
+    object-fit: contain !important;
+}
+
+.mobile-title {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    font-family: 'IRANSans', sans-serif !important;
+}
+
+.mobile-menu-close {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: none !important;
+    color: white !important;
+    cursor: pointer !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+    font-size: 1.2rem !important;
+}
+
+.mobile-menu-close:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    transform: scale(1.1) !important;
+}
+
+.mobile-menu-close:focus {
+    outline: 2px solid #FFD700 !important;
+    outline-offset: 2px !important;
+}
+
+.mobile-menu-close i {
+    font-family: "Font Awesome 7 Pro", "Font Awesome 7 Free" !important;
+    font-weight: 900 !important;
+}
+
+/* Mobile Menu Content */
+.mobile-menu-content,
+.mobile-navigation {
+    padding: 1rem !important;
+}
+
+.mobile-menu {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.mobile-menu li {
+    margin: 0 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.mobile-menu li:last-child {
+    border-bottom: none !important;
+}
+
+.mobile-menu a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    padding: 1rem 0.5rem !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    border-radius: 8px !important;
+    position: relative !important;
+    font-family: 'IRANSans', sans-serif !important;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a:focus {
+    background: rgba(31, 165, 71, 0.1) !important;
+    color: #1FA547 !important;
+    transform: translateX(-5px) !important;
+}
+
+.mobile-menu a i {
+    font-size: 1.25rem !important;
+    color: #1FA547 !important;
+    width: 24px !important;
+    text-align: center !important;
+    font-family: "Font Awesome 7 Pro", "Font Awesome 7 Brands", "Font Awesome 7 Free" !important;
+    font-weight: 900 !important;
+    flex-shrink: 0 !important;
+}
+
+.mobile-menu a span {
+    flex: 1 !important;
+    font-family: 'IRANSans', sans-serif !important;
+}
+
+/* Submenu Support */
+.mobile-menu .menu-item-has-children > a,
+.mobile-menu .has-submenu > a {
+    position: relative !important;
+}
+
+.mobile-menu .menu-item-has-children > a::after,
+.mobile-menu .has-submenu > a::after {
+    content: '\f053' !important;
+    font-family: "Font Awesome 7 Pro" !important;
+    font-weight: 900 !important;
+    font-size: 0.875rem !important;
+    color: #666 !important;
+    margin-right: auto !important;
+    transition: transform 0.3s ease !important;
+}
+
+.mobile-menu .menu-item-has-children.open > a::after,
+.mobile-menu .has-submenu.open > a::after {
+    transform: rotate(90deg) !important;
+}
+
+.mobile-menu .sub-menu {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease !important;
+    padding-right: 2rem !important;
+    background: #f8f9fa !important;
+    margin: 0.5rem 0 !important;
+    border-radius: 8px !important;
+}
+
+.mobile-menu .menu-item-has-children.open .sub-menu,
+.mobile-menu .has-submenu.open .sub-menu {
+    max-height: 300px !important;
+}
+
+.mobile-menu .sub-menu li {
+    border-bottom: 1px solid #e9ecef !important;
+}
+
+.mobile-menu .sub-menu a {
+    padding: 0.75rem 0.5rem !important;
+    font-size: 0.9rem !important;
+    color: #666 !important;
+}
+
+.mobile-menu .sub-menu a:hover {
+    color: #1FA547 !important;
+}
+
+/* Mobile Menu Footer */
+.mobile-menu-footer {
+    display: flex !important;
+    gap: 0.75rem !important;
+    margin: 2rem 1rem 1rem !important;
+    padding-top: 1.5rem !important;
+    border-top: 2px solid #f0f0f0 !important;
+}
+
+.mobile-phone,
+.mobile-cta {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 1rem !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s ease !important;
+    font-family: 'IRANSans', sans-serif !important;
+}
+
+.mobile-phone {
+    background: #e3f2fd !important;
+    color: #1976d2 !important;
+    border: 2px solid #bbdefb !important;
+}
+
+.mobile-phone:hover,
+.mobile-phone:focus {
+    background: #1976d2 !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+}
+
+.mobile-cta {
+    background: rgba(31, 165, 71, 0.1) !important;
+    color: #1FA547 !important;
+    border: 2px solid rgba(31, 165, 71, 0.3) !important;
+}
+
+.mobile-cta:hover,
+.mobile-cta:focus {
+    background: #1FA547 !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+}
+
+.mobile-phone i,
+.mobile-cta i {
+    font-size: 1.5rem !important;
+    font-family: "Font Awesome 7 Pro", "Font Awesome 7 Free" !important;
+    font-weight: 900 !important;
+}
+
+/* Hamburger Button Styles */
+.mobile-menu-toggle,
+.mobile-nav-toggle,
+.hamburger-menu {
+    display: none !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0.5rem !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus {
+    background: rgba(31, 165, 71, 0.1) !important;
+}
+
+.mobile-menu-toggle:focus {
+    outline: 2px solid #1FA547 !important;
+    outline-offset: 2px !important;
+}
+
+.hamburger-lines {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3px !important;
+}
+
+.hamburger-line {
+    width: 25px !important;
+    height: 3px !important;
+    background: #333 !important;
+    transition: all 0.3s ease !important;
+    border-radius: 2px !important;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px) !important;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0 !important;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px) !important;
+}
+
+/* Body scroll lock */
+body.mobile-menu-open {
+    overflow: hidden !important;
+    height: 100vh !important;
+}
+
+/* Show mobile menu button on mobile */
+@media (max-width: 768px) {
+    .mobile-menu-toggle,
+    .mobile-nav-toggle,
+    .hamburger-menu {
+        display: block !important;
+    }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .mobile-menu-wrapper {
+        width: 280px !important;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .mobile-menu-wrapper {
+        width: 100vw !important;
+        max-width: none !important;
+    }
+    
+    .mobile-menu-header {
+        padding: 1rem !important;
+    }
+    
+    .mobile-menu a {
+        padding: 0.875rem 0.5rem !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .mobile-menu-footer {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+}
+
+/* RTL specific adjustments */
+[dir="ltr"] .mobile-menu a {
+    transform: translateX(5px) !important;
+}
+
+[dir="ltr"] .mobile-menu a:hover {
+    transform: translateX(0) !important;
+}
+
+[dir="ltr"] .mobile-menu .sub-menu {
+    padding-left: 2rem !important;
+    padding-right: 0 !important;
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+    .mobile-menu-overlay {
+        background: rgba(0, 0, 0, 0.95) !important;
+    }
+    
+    .mobile-menu-wrapper {
+        border: 2px solid #ffffff !important;
+    }
+    
+    .mobile-menu a {
+        border: 1px solid #e0e0e0 !important;
+        margin-bottom: 2px !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .mobile-menu-overlay,
+    .mobile-menu-wrapper,
+    .mobile-menu a,
+    .mobile-menu .sub-menu {
+        transition: none !important;
+        animation: none !important;
+    }
+}

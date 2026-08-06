@@ -1,0 +1,282 @@
+/* RTL Fixes for Teznevisan Theme */
+
+body {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.container {
+    direction: rtl;
+}
+
+/* FontAwesome RTL Fix */
+.fa, .fas, .far, .fab, .fal, .fad {
+    direction: rtl;
+    display: inline-block;
+}
+
+/* Header RTL */
+.site-header {
+    direction: rtl;
+}
+
+.header-main {
+    direction: rtl;
+}
+
+.nav-menu {
+    direction: rtl;
+}
+
+.nav-menu li {
+    direction: rtl;
+}
+
+/* Mobile menu RTL */
+.mobile-menu-content {
+    direction: rtl;
+    text-align: right;
+}
+
+.mobile-nav-menu {
+    direction: rtl;
+}
+
+.mobile-nav-menu li {
+    direction: rtl;
+}
+
+.mobile-nav-menu a {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Search RTL */
+.search-input {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.search-form-enhanced {
+    direction: rtl;
+}
+
+/* Content RTL */
+.site-main {
+    direction: rtl;
+}
+
+/* Cards and Components RTL */
+.service-category-showcase,
+.advantage-card,
+.blog-category-card,
+.process-step-home {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Buttons RTL */
+.button, .btn,
+.hero-cta-primary,
+.hero-cta-secondary,
+.cta-minimal-primary,
+.view-all-services-btn {
+    direction: rtl;
+}
+
+/* Forms RTL */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Footer RTL */
+.site-footer {
+    direction: rtl;
+}
+
+.footer-grid {
+    direction: rtl;
+}
+
+.footer-menu {
+    direction: rtl;
+    text-align: right;
+}
+
+.footer-menu li {
+    direction: rtl;
+}
+
+.footer-menu a {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Accessibility Widget RTL */
+.accessibility-widget-fixed {
+    direction: rtl !important;
+}
+
+.accessibility-panel-fixed {
+    direction: rtl !important;
+}
+
+.control-group-fixed {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.control-btn-fixed {
+    direction: rtl !important;
+    text-align: center !important;
+}
+
+/* Grid RTL fixes */
+.services-showcase,
+.advantages-grid,
+.blog-categories-grid,
+.process-timeline,
+.pricing-features,
+.faq-home-grid {
+    direction: rtl;
+}
+
+/* Flexbox RTL fixes */
+.header-actions,
+.hero-content-grid,
+.hero-features,
+.hero-actions,
+.hero-guarantees {
+    direction: rtl;
+}
+
+/* Text alignment */
+h1, h2, h3, h4, h5, h6 {
+    text-align: right;
+}
+
+p {
+    text-align: right;
+}
+
+/* Lists RTL */
+ul, ol {
+    direction: rtl;
+    text-align: right;
+}
+
+li {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Tables RTL */
+table {
+    direction: rtl;
+}
+
+th, td {
+    text-align: right;
+}
+
+/* Specific component RTL fixes */
+.hero-minimal-content {
+    direction: rtl;
+    text-align: center;
+}
+
+.hero-stats-minimal {
+    direction: rtl;
+}
+
+.final-cta-content {
+    direction: rtl;
+    text-align: center;
+}
+
+.trust-minimal {
+    direction: rtl;
+}
+
+/* Icon positioning fixes for RTL */
+.nav-menu a i {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+.mobile-nav-menu a i {
+    margin-left: 12px;
+    margin-right: 0;
+}
+
+.control-btn-fixed i {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Floating elements RTL */
+.float-element {
+    direction: ltr; /* Keep animations LTR */
+}
+
+/* Animation directions for RTL */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Media queries for RTL */
+@media (max-width: 768px) {
+    .mobile-menu-overlay {
+        right: -100%;
+        left: auto;
+    }
+    
+    .mobile-menu-overlay.open {
+        right: 0;
+    }
+    
+    .mobile-menu-content {
+        direction: rtl;
+    }
+}
+
+/* Scrollbar RTL */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1FA547;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #178A3A;
+}

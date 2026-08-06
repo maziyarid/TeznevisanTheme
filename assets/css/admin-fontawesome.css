@@ -1,0 +1,250 @@
+/**
+ * Admin FontAwesome 7 Pro Force Load - ENHANCED CLEAN VERSION
+ * - Valid @font-face with src defined
+ * - Accessibility: icons hidden from AT with aria-hidden + ::before fallback
+ * - Cleaner structure
+ */
+/* Import the core Font Awesome CSS file */
+@import url('/assets/fonts/fontawesome/css/all.css');
+/* =========================================
+   Font Face Declarations
+   (Update URLs with correct paths)
+========================================= */
+@font-face {
+font-family: "Font Awesome 7 Pro";
+src: url("../fonts/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"),
+url("../fonts/fontawesome/webfonts/fa-solid-900.woff") format("woff");
+font-weight: 900;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: "Font Awesome 7 Brands";
+src: url("../fonts/fontawesome/webfonts/fa-brands-400.woff2") format("woff2"),
+url("../fonts/fontawesome/webfonts/fa-brands-400.woff") format("woff");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: "Font Awesome 7 Free";
+src: url("../fonts/fontawesome/webfonts/fa-regular-400.woff2") format("woff2"),
+url("../fonts/fontawesome/webfonts/fa-regular-400.woff") format("woff");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSans";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/iranSans/woff2/IRANSansWeb.woff2") format("woff2"),
+       url("../fonts/iranSans/eot/IRANSansWeb.eot") format("eot"),
+       url("../fonts/iranSans/ttf/IRANSansWeb.ttf") format("ttf"),
+       url("../fonts/iranSans/woff/IRANSansWeb.woff") format("woff");
+}
+
+/* =========================================
+   Base Admin Fonts
+========================================= */
+body.wp-admin,
+#wpadminbar,
+.wp-admin #wpbody,
+.wp-admin #wpbody-content,
+.wp-admin .wrap,
+.wp-admin input,
+.wp-admin select,
+.wp-admin textarea,
+.wp-admin button {
+  font-family: "IRANSans", -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* =========================================
+   Force FontAwesome for Admin Icons
+========================================= */
+.fa,
+.fa-solid,
+.fa-regular,
+.fa-brands,
+.fa-light,
+.fa-thin,
+.fa-duotone,
+[class^="fa-"],
+[class*=" fa-"],
+.dashicons-before:before,
+#adminmenu .wp-menu-image:before,
+#adminmenu .fa,
+#adminmenu [class^="fa-"],
+#adminmenu [class*=" fa-"],
+.wp-menu-image .fa,
+#wpadminbar .fa,
+#wpadminbar [class^="fa-"],
+#wpadminbar [class*=" fa-"],
+.mce-i-fa:before,
+.button .fa,
+.button [class^="fa-"],
+.postbox-header .fa,
+.widget-title .fa {
+  font-family: "Font Awesome 7 Pro", "Font Awesome 7 Brands", "Font Awesome 7 Free" !important;
+  font-style: normal !important;
+  font-weight: 900 !important;
+  text-rendering: auto !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  display: inline-block !important;
+  vertical-align: baseline !important;
+}
+
+/* Accessibility: ensure icons are hidden from screen readers
+   Use aria-hidden="true" in HTML <i> elements.
+   CSS precaution: hide pseudo content semantically. */
+.fa::before,
+.fa-solid::before,
+.fa-regular::before,
+.fa-brands::before,
+.fa-light::before,
+.fa-thin::before,
+.fa-duotone::before,
+[class^="fa-"]::before,
+[class*=" fa-"]::before,
+.dashicons-before::before,
+#adminmenu .fa::before,
+#adminmenu [class^="fa-"]::before,
+#adminmenu [class*=" fa-"]::before,
+.wp-menu-image .fa::before,
+.menu-icon-generic div.wp-menu-image::before,
+#wpadminbar .fa::before,
+#wpadminbar [class^="fa-"]::before,
+#wpadminbar [class*=" fa-"]::before {
+  -aria-hidden: true;       /* for HTML usage */
+  speak-as: none;          /* CSS Speech spec */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* =========================================
+   Font Weights / Variants
+========================================= */
+.fa-regular { font-weight: 400 !important; font-family: "Font Awesome 7 Free" !important; }
+.fa-brands  { font-weight: 400 !important; font-family: "Font Awesome 7 Brands" !important; }
+.fa-light   { font-weight: 300 !important; }
+.fa-thin    { font-weight: 100 !important; }
+.fa-duotone { font-weight: 900 !important; }
+
+/* =========================================
+   Admin Menu Icon Styling
+========================================= */
+#adminmenu .wp-menu-image:before {
+  font-family: "Font Awesome 7 Pro" !important;
+  font-weight: 900 !important;
+  font-size: 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  display: inline-block !important;
+}
+
+/* Specific Menu Icons */
+#menu-dashboard .wp-menu-image:before    { content: "\f3fd" !important; } /* tachometer-alt */
+#menu-posts .wp-menu-image:before        { content: "\f15b" !important; } /* file-lines */
+#menu-media .wp-menu-image:before        { content: "\f03e" !important; } /* image */
+#menu-pages .wp-menu-image:before        { content: "\f15c" !important; } /* file-text */
+#menu-comments .wp-menu-image:before     { content: "\f086" !important; } /* comments */
+#menu-appearance .wp-menu-image:before   { content: "\f53f" !important; } /* palette */
+#menu-plugins .wp-menu-image:before      { content: "\f1e6" !important; } /* plug */
+#menu-users .wp-menu-image:before        { content: "\f007" !important; } /* user */
+#menu-tools .wp-menu-image:before        { content: "\f0ad" !important; } /* wrench */
+#menu-settings .wp-menu-image:before     { content: "\f013" !important; } /* gear */
+#menu-posts-testimonials .wp-menu-image:before { content: "\f005" !important; } /* star */
+#menu-posts-portfolio .wp-menu-image:before    { content: "\f0b1" !important; } /* briefcase */
+#menu-posts-service_inquiry .wp-menu-image:before { content: "\f0e0" !important; } /* envelope */
+
+/* =========================================
+   Contextual Icon Styling
+========================================= */
+#adminmenu .fa,
+#adminmenu [class^="fa-"],
+#adminmenu [class*=" fa-"] {
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  margin-left: 8px !important;
+}
+
+#wpadminbar .fa,
+#wpadminbar [class^="fa-"],
+#wpadminbar [class*=" fa-"] {
+  font-size: 16px !important;
+  line-height: 1 !important;
+}
+
+.button .fa,
+.button [class^="fa-"],
+.button [class*=" fa-"] {
+  font-size: 14px !important;
+  margin-left: 5px !important;
+}
+
+.postbox-header .fa,
+.widget-title .fa {
+  margin-left: 5px !important;
+  color: #1FA547 !important;
+}
+
+/* =========================================
+   TinyMCE / Dashboard
+========================================= */
+.mce-i-fa::before,
+.mce-i-fontawesome::before {
+  content: "\f2b4" !important; /* fa-font-awesome */
+  font-family: "Font Awesome 7 Pro" !important;
+  font-weight: 900 !important;
+}
+
+#dashboard_right_now .fa,
+.activity-block .fa {
+  margin-left: 5px !important;
+  color: #1FA547 !important;
+}
+
+/* =========================================
+   Accessibility & RTL
+========================================= */
+#adminmenu .wp-menu-image,
+#adminmenu .wp-menu-image:before {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#adminmenu li.menu-top:hover .wp-menu-image:before,
+#adminmenu li.opensub .wp-menu-image:before,
+#adminmenu li.current .wp-menu-image:before {
+  color: #1FA547 !important;
+}
+
+[dir="rtl"] #adminmenu .fa { margin-right: 8px !important; margin-left: 0 !important; }
+[dir="rtl"] .button .fa   { margin-right: 5px !important; margin-left: 0 !important; }
+
+/* =========================================
+   Media Queries
+========================================= */
+@media screen and (max-width: 782px) {
+  #adminmenu .fa,
+  #adminmenu [class^="fa-"],
+  #adminmenu [class*=" fa-"] { font-size: 16px !important; }
+  .wp-menu-image .fa { font-size: 18px !important; }
+}
+
+@media (prefers-contrast: high) {
+  .fa, [class^="fa-"], [class*=" fa-"] { font-weight: 900 !important; }
+}
+
+@media print {
+  .fa, [class^="fa-"], [class*=" fa-"] {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

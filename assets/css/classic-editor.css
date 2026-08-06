@@ -1,0 +1,106 @@
+/* Classic Editor Styles */
+.teznevisan-classic-editor {
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+.editor-toolbar {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-bottom: none;
+  padding: 8px 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.toolbar-group {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.toolbar-group:not(:last-child)::after {
+  content: '';
+  width: 1px;
+  height: 20px;
+  background: #dee2e6;
+  margin: 0 8px;
+}
+
+.toolbar-group button {
+  background: white;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  transition: all 0.2s;
+}
+
+.toolbar-group button:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.toolbar-group button:active {
+  background: #dee2e6;
+}
+
+.editor-content {
+  font-family: inherit;
+  border: 1px solid #dee2e6;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  resize: vertical;
+}
+
+/* WordPress Admin Integration */
+.wrap .teznevisan-editor {
+  margin: 0 -20px;
+}
+
+.notice {
+  margin: 5px 0 15px;
+  padding: 1px 12px;
+  background: #fff;
+  border-left: 4px solid #00a0d2;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+
+.notice.notice-success {
+  border-left-color: #46b450;
+}
+
+.notice.notice-error {
+  border-left-color: #dc3232;
+}
+
+/* RTL Support */
+[dir="rtl"] .toolbar-group:not(:last-child)::after {
+  margin: 0 8px 0 8px;
+}
+
+[dir="rtl"] .notice {
+  border-left: none;
+  border-right: 4px solid #00a0d2;
+}
+
+[dir="rtl"] .notice.notice-success {
+  border-right-color: #46b450;
+}
+
+[dir="rtl"] .notice.notice-error {
+  border-right-color: #dc3232;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .editor-body {
+    grid-template-columns: 1fr;
+  }
+  
+  .toolbar-group {
+    flex-wrap: wrap;
+  }
+}

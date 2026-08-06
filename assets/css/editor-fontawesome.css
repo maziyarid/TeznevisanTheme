@@ -1,0 +1,351 @@
+/**
+ * TinyMCE Editor FontAwesome 7 Pro Styles
+ * Ensures FA icons render correctly in Classic Editor
+ */
+
+/* Font Face Declarations for Editor */
+@font-face {
+    font-family: "Font Awesome 7 Pro";
+    src: url("../fonts/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"),
+         url("../fonts/fontawesome/webfonts/fa-solid-900.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Font Awesome 7 Brands";
+    src: url("../fonts/fontawesome/webfonts/fa-brands-400.woff2") format("woff2"),
+         url("../fonts/fontawesome/webfonts/fa-brands-400.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Font Awesome 7 Free";
+    src: url("../fonts/fontawesome/webfonts/fa-regular-400.woff2") format("woff2"),
+         url("../fonts/fontawesome/webfonts/fa-regular-400.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* IRANSans Font for Persian Text */
+@font-face {
+    font-family: 'IRANSans';
+    src: url('../fonts/iransans/IRANSans-Regular.woff2') format('woff2'),
+         url('../fonts/iransans/IRANSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Base FontAwesome Classes */
+.fa, .fa-solid, .fa-regular, .fa-brands, .fa-light, .fa-thin, .fa-duotone,
+[class^="fa-"], [class*=" fa-"] {
+    font-family: "Font Awesome 7 Pro", "Font Awesome 7 Brands", "Font Awesome 7 Free" !important;
+    font-weight: 900;
+    direction: ltr;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: inherit;
+    text-transform: none;
+    vertical-align: baseline;
+}
+
+/* Force all FA icons in admin to use FA7 Pro and provide accessible alt-text */
+.fa::before, .fa-solid::before, .fa-regular::before, .fa-brands::before,
+.fa-light::before, .fa-thin::before, .fa-duotone::before,
+[class^="fa-"]::before, [class*=" fa-"]::before,
+.dashicons-before::before, #adminmenu .fa::before,
+#adminmenu [class^="fa-"]::before, #adminmenu [class*=" fa-"]::before,
+.wp-menu-image .fa::before, .menu-icon-generic div.wp-menu-image::before,
+#wpadminbar .fa::before, #wpadminbar [class^="fa-"]::before,
+#wpadminbar [class*=" fa-"]::before {
+    /* Use an empty string to prevent the icon from being read by screen readers */
+    content: "" / "";
+}
+
+.fa-regular { 
+    font-weight: 400; 
+    font-family: "Font Awesome 7 Free" !important;
+}
+
+.fa-brands { 
+    font-family: "Font Awesome 7 Brands" !important; 
+    font-weight: 400; 
+}
+
+.fa-light { font-weight: 300; }
+.fa-thin { font-weight: 100; }
+.fa-duotone { font-weight: 900; }
+
+/* Size Classes */
+.fa-xs { font-size: 0.75em; }
+.fa-sm { font-size: 0.875em; }
+.fa-lg { font-size: 1.25em; }
+.fa-xl { font-size: 1.5em; }
+.fa-2x { font-size: 2em; }
+.fa-3x { font-size: 3em; }
+.fa-4x { font-size: 4em; }
+.fa-5x { font-size: 5em; }
+
+/* Editor Body Styles */
+body {
+    font-family: 'IRANSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    direction: rtl;
+    text-align: right;
+}
+
+/* Persian Typography */
+body, p, div, span, h1, h2, h3, h4, h5, h6 {
+    font-family: 'IRANSans', sans-serif;
+}
+
+/* English Text */
+body[lang="en"], [lang="en"], .en {
+    direction: ltr;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Icon Alignment in RTL */
+[dir="rtl"] .fa, [dir="rtl"] [class^="fa-"], [dir="rtl"] [class*=" fa-"] {
+    margin-left: 0.25em;
+    margin-right: 0;
+}
+
+[dir="ltr"] .fa, [dir="ltr"] [class^="fa-"], [dir="ltr"] [class*=" fa-"] {
+    margin-right: 0.25em;
+    margin-left: 0;
+}
+
+/* Icon in headings */
+h1 .fa, h2 .fa, h3 .fa, h4 .fa, h5 .fa, h6 .fa,
+h1 [class^="fa-"], h2 [class^="fa-"], h3 [class^="fa-"], 
+h4 [class^="fa-"], h5 [class^="fa-"], h6 [class^="fa-"] {
+    margin-left: 0.5em;
+    color: #1FA547;
+}
+
+/* Icon in buttons and links */
+a .fa, a [class^="fa-"], a [class*=" fa-"],
+button .fa, button [class^="fa-"], button [class*=" fa-"] {
+    margin-left: 0.25em;
+}
+
+/* TinyMCE Specific Styles */
+.mce-content-body .fa, 
+.mce-content-body [class^="fa-"], 
+.mce-content-body [class*=" fa-"] {
+    font-family: "Font Awesome 7 Pro", "Font Awesome 7 Brands", "Font Awesome 7 Free" !important;
+    display: inline-block;
+}
+
+/* Content blocks with icons */
+.info-box, .warning-box, .success-box, .error-box {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-right: 4px solid;
+}
+
+.info-box {
+    background: #d1ecf1;
+    border-color: #0c5460;
+    color: #0c5460;
+}
+
+.warning-box {
+    background: #fff3cd;
+    border-color: #856404;
+    color: #856404;
+}
+
+.success-box {
+    background: #d4edda;
+    border-color: #155724;
+    color: #155724;
+}
+
+.error-box {
+    background: #f8d7da;
+    border-color: #721c24;
+    color: #721c24;
+}
+
+.info-box .fa, .warning-box .fa, .success-box .fa, .error-box .fa {
+    margin-left: 8px;
+    font-size: 1.1em;
+}
+
+/* Custom Button Styles */
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1FA547;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background: #178A3A;
+    color: white;
+}
+
+.custom-button .fa {
+    margin-right: 8px;
+}
+
+/* Highlight Styles */
+.highlight {
+    background: #fff3cd;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Code Blocks */
+pre, code {
+    font-family: 'Courier New', monospace;
+    background: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 3px;
+    direction: ltr;
+    text-align: left;
+}
+
+pre {
+    padding: 10px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: right;
+}
+
+table th {
+    background: #f8f9fa;
+    font-weight: bold;
+}
+
+/* Lists */
+ul, ol {
+    padding-right: 20px;
+    margin: 10px 0;
+}
+
+[dir="ltr"] ul, [dir="ltr"] ol {
+    padding-left: 20px;
+    padding-right: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* Links */
+a {
+    color: #1FA547;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #178A3A;
+    text-decoration: underline;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.wp-caption {
+    max-width: 100%;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.wp-caption-text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* Blockquotes */
+blockquote {
+    border-right: 4px solid #1FA547;
+    background: #f8f9fa;
+    margin: 15px 0;
+    padding: 15px 20px;
+    font-style: italic;
+    color: #555;
+}
+
+[dir="ltr"] blockquote {
+    border-left: 4px solid #1FA547;
+    border-right: none;
+}
+
+/* Print Styles */
+@media print {
+    .fa, [class^="fa-"], [class*=" fa-"] {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #1a1a1a;
+        color: #e0e0e0;
+    }
+    
+    .info-box {
+        background: #1e3a5f;
+        color: #87ceeb;
+    }
+    
+    .warning-box {
+        background: #5d4e1a;
+        color: #ffd700;
+    }
+    
+    .success-box {
+        background: #1a4d2e;
+        color: #90ee90;
+    }
+    
+    .error-box {
+        background: #4d1a1a;
+        color: #ffb3b3;
+    }
+}

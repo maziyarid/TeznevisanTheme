@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "buildDate": "2025-01-01T00:00:00Z",
+  "source": "TypeScript/React",
+  "files": {
+    "main.js": {
+      "source": "../main.ts",
+      "size": "15.2KB",
+      "dependencies": ["accessibility.js", "mobile-menu.js", "chaty-fix.js"]
+    },
+    "teznevisan-editor.umd.js": {
+      "source": "../react-components/",
+      "size": "12.8KB", 
+      "dependencies": ["react", "react-dom", "tinymce"]
+    },
+    "components.js": {
+      "source": "../react-components/",
+      "size": "8.4KB",
+      "dependencies": ["react"] },
+      "admin.js": {
+        "source": "../admin/",
+        "size": "6.7KB",
+        "dependencies": ["jquery", "tinymce"] },
+        "utils.js": {
+            "source": "../utils/",
+            "size": "4.2KB",
+            "dependencies": [] } },
+            "features": [
+                "Persian Typography Support",
+                "FontAwesome 7 Pro Integration",
+                "WCAG AA Accessibility",
+                "Mobile-First Design",
+                "RTL/LTR Support",
+                "React Editor Integration",
+                "TinyMCE Enhancement"
+                ],
+                "browsers": {
+                    "chrome": ">=90",
+                    "firefox": ">=88",
+                    "safari": ">=14",
+                    "edge": ">=90" }
+                }
+                

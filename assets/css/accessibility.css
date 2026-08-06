@@ -1,0 +1,518 @@
+/**
+ * Accessibility Widget - Mobile-Friendly & Touch-Ready
+ * Enhanced for WCAG AA compliance
+ */
+
+/* Base Widget */
+.accessibility-widget-fixed {
+    position: fixed !important;
+    top: 50% !important;
+    left: 0 !important;
+    transform: translateY(-50%) !important;
+    z-index: 9998 !important;
+    font-family: 'IRANSans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    direction: rtl !important;
+}
+
+/* Mobile positioning */
+@media (max-width: 768px) {
+    .accessibility-widget-fixed {
+        top: auto !important;
+        bottom: 20px !important;
+        transform: none !important;
+    }
+}
+
+/* Toggle Button - Touch-friendly */
+.accessibility-toggle-fixed {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 0 15px 15px 0 !important;
+    background: #1FA547 !important;
+    border: none !important;
+    color: white !important;
+    cursor: pointer !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 2px 0 15px rgba(31, 165, 71, 0.3) !important;
+    position: relative !important;
+    /* Touch-friendly */
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+.accessibility-toggle-fixed:hover,
+.accessibility-toggle-fixed:focus {
+    background: #178A3A !important;
+    transform: translateX(5px) !important;
+    box-shadow: 3px 0 20px rgba(31, 165, 71, 0.4) !important;
+}
+
+.accessibility-toggle-fixed:focus {
+    outline: 3px solid #FFD700 !important;
+    outline-offset: 2px !important;
+}
+
+/* Touch active state */
+.accessibility-toggle-fixed.touch-active {
+    background: #178A3A !important;
+    transform: scale(0.95) translateX(3px) !important;
+}
+
+/* Panel - Mobile responsive */
+.accessibility-panel-fixed {
+    position: absolute !important;
+    left: 60px !important;
+    top: 50% !important;
+    transform: translateY(-50%) scale(0.8) !important;
+    width: 340px !important;
+    max-height: 80vh !important;
+    background: #ffffff !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2) !important;
+    border: 2px solid #e0e0e0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 9999 !important;
+    overflow: hidden !important;
+}
+
+.accessibility-panel-fixed.open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(-50%) scale(1) !important;
+}
+
+/* Mobile panel adjustments */
+@media (max-width: 768px) {
+    .accessibility-panel-fixed {
+        left: 50px !important;
+        top: auto !important;
+        bottom: 70px !important;
+        transform: scale(0.8) !important;
+        width: calc(100vw - 70px) !important;
+        max-width: 320px !important;
+        max-height: 70vh !important;
+    }
+    
+    .accessibility-panel-fixed.open {
+        transform: scale(1) !important;
+    }
+    
+    /* Prevent body scroll when panel is open on mobile */
+    body.accessibility-panel-open {
+        overflow: hidden !important;
+    }
+}
+
+/* =========================================
+   Control Buttons - Touch-friendly
+========================================= */
+.theme-btn-fixed,
+.font-btn-fixed,
+.feature-btn-fixed,
+.reset-btn-fixed {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 12px 10px !important;
+  background: #f8f9fa !important;
+  border: 2px solid #e9ecef !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  font-size: 11px !important;
+  font-family: 'IRANSans', sans-serif !important;
+  font-weight: 600 !important;
+  color: #495057 !important;
+  min-width: 44px !important;  /* WCAG AAA touch target */
+  min-height: 44px !important;
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.theme-btn-fixed:hover,
+.font-btn-fixed:hover,
+.feature-btn-fixed:hover,
+.reset-btn-fixed:hover {
+  background: #1FA547 !important;
+  color: #fff !important;
+  border-color: #178A3A !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(31, 165, 71, 0.3) !important;
+}
+
+.theme-btn-fixed:focus,
+.font-btn-fixed:focus,
+.feature-btn-fixed:focus,
+.reset-btn-fixed:focus {
+  outline: 3px solid #FFD700 !important;
+  outline-offset: 2px !important;
+}
+
+/* Touch Active States */
+.theme-btn-fixed.touch-active,
+.font-btn-fixed.touch-active,
+.feature-btn-fixed.touch-active,
+.reset-btn-fixed.touch-active {
+  background: #1FA547 !important;
+  color: #fff !important;
+  transform: scale(0.95) !important;
+}
+
+/* Active / Pressed States */
+.active-fixed,
+.theme-btn-fixed[aria-pressed="true"],
+.font-btn-fixed[aria-pressed="true"],
+.feature-btn-fixed[aria-pressed="true"] {
+  background: #1FA547 !important;
+  color: #fff !important;
+  border-color: #178A3A !important;
+  box-shadow: 0 2px 8px rgba(31, 165, 71, 0.4) !important;
+}
+
+/* Button Icons */
+.theme-btn-fixed i,
+.font-btn-fixed i,
+.feature-btn-fixed i,
+.reset-btn-fixed i {
+  font-size: 18px !important;
+  margin-bottom: 2px !important;
+  font-family: "Font Awesome 7 Pro", "Font Awesome 7 Brands", "Font Awesome 7 Free" !important;
+  font-weight: 900 !important;
+}
+
+/* Button Text */
+.theme-btn-fixed span,
+.font-btn-fixed span,
+.feature-btn-fixed span,
+.reset-btn-fixed span {
+  font-family: 'IRANSans', sans-serif !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+}
+
+/* =========================================
+   Control Groups
+========================================= */
+.control-group-fixed {
+  margin-bottom: 25px !important;
+}
+
+.control-group-fixed h4 {
+  margin: 0 0 12px 0 !important;
+  padding-bottom: 8px !important;
+  font-family: 'IRANSans', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #2c3e50 !important;
+  border-bottom: 2px solid #ecf0f1 !important;
+}
+
+/* Button Grid Layouts */
+.control-buttons-fixed {
+  display: grid !important;
+  gap: 10px !important;
+}
+
+.theme-modes-fixed { grid-template-columns: 1fr 1fr !important; }
+.font-controls-fixed { grid-template-columns: 1fr 1fr 1fr !important; }
+.accessibility-tools-fixed { grid-template-columns: 1fr 1fr !important; }
+
+/* =========================================
+   Responsive Adjustments
+========================================= */
+@media (max-width: 768px) {
+  .theme-modes-fixed,
+  .accessibility-tools-fixed {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .font-controls-fixed {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .theme-btn-fixed,
+  .font-btn-fixed,
+  .feature-btn-fixed,
+  .reset-btn-fixed {
+    padding: 10px 8px !important;
+    font-size: 10px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+  }
+
+  .theme-btn-fixed i,
+  .font-btn-fixed i,
+  .feature-btn-fixed i,
+  .reset-btn-fixed i {
+    font-size: 16px !important;
+  }
+}
+
+/* =========================================
+   Reading Guide
+========================================= */
+.reading-guide-line-fixed {
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, transparent, #1FA547, transparent) !important;
+  box-shadow: 0 0 10px rgba(31, 165, 71, 0.7) !important;
+  border-radius: 2px !important;
+  z-index: 9997 !important;
+  pointer-events: none !important;
+  display: none !important;
+}
+
+/* =========================================
+   Theme Variations
+========================================= */
+body[data-theme="dark"],
+html[data-theme="dark"] {
+  background-color: #1a1a1a !important;
+  color: #f0f0f0 !important;
+}
+
+body[data-theme="dark"] .accessibility-panel-fixed {
+  background: #2d2d2d !important;
+  border-color: #404040 !important;
+  color: #f0f0f0 !important;
+}
+
+body[data-theme="dark"] .control-group-fixed h4 {
+  color: #e0e0e0 !important;
+  border-bottom-color: #404040 !important;
+}
+
+body[data-theme="dark"] .theme-btn-fixed,
+body[data-theme="dark"] .font-btn-fixed,
+body[data-theme="dark"] .feature-btn-fixed,
+body[data-theme="dark"] .reset-btn-fixed {
+  background: #383838 !important;
+  color: #e0e0e0 !important;
+  border-color: #555 !important;
+}
+
+body[data-theme="sepia"], html[data-theme="sepia"] {
+  background-color: #f4f1ea !important;
+  color: #5c4b37 !important;
+}
+
+body[data-theme="sepia"] .accessibility-panel-fixed {
+  background: #f9f6f0 !important;
+  border-color: #d4c4a0 !important;
+}
+
+body[data-theme="contrast"], html[data-theme="contrast"] {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body[data-theme="contrast"] * {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+body[data-theme="contrast"] .accessibility-panel-fixed {
+  background: #000 !important;
+  color: #fff !important;
+  border: 3px solid #fff !important;
+}
+
+/* =========================================
+   Font Size Controls
+========================================= */
+body.font-size-small { font-size: 14px !important; }
+body.font-size-large { font-size: 18px !important; }
+body.font-size-xlarge { font-size: 22px !important; }
+
+/* =========================================
+   Focus Mode
+========================================= */
+body.focus-mode *:not(:focus):not(:hover):not(.accessibility-widget-fixed):not(.accessibility-widget-fixed *) {
+  opacity: 0.3 !important;
+  transition: opacity 0.3s ease !important;
+}
+body.focus-mode *:focus,
+body.focus-mode *:hover {
+  opacity: 1 !important;
+}
+
+/* =========================================
+   Accessibility Utilities
+========================================= */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .accessibility-toggle-fixed { border: 2px solid #fff !important; }
+  .accessibility-panel-fixed { border: 3px solid #000 !important; }
+  .theme-btn-fixed,
+  .font-btn-fixed,
+  .feature-btn-fixed,
+  .reset-btn-fixed {
+    border: 2px solid #000 !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .accessibility-toggle-fixed,
+  .accessibility-panel-fixed,
+  .theme-btn-fixed,
+  .font-btn-fixed,
+  .feature-btn-fixed,
+  .reset-btn-fixed {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* =========================================
+   Scrollbar Styling
+========================================= */
+.accessibility-content-fixed::-webkit-scrollbar {
+  width: 6px !important;
+}
+.accessibility-content-fixed::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+  border-radius: 3px !important;
+}
+.accessibility-content-fixed::-webkit-scrollbar-thumb {
+  background: #1FA547 !important;
+  border-radius: 3px !important;
+}
+.accessibility-content-fixed::-webkit-scrollbar-thumb:hover {
+  background: #178A3A !important;
+}
+
+/* =========================================
+   Panel
+========================================= */
+.accessibility-header-fixed {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 20px !important;
+  background: linear-gradient(135deg, #1FA547, #2FD65A) !important;
+  color: #fff !important;
+}
+
+.accessibility-header-fixed h3 {
+  margin: 0 !important;
+  font-family: 'IRANSans', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.close-btn-fixed {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border: none !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+  touch-action: manipulation !important;
+}
+
+.close-btn-fixed:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  transform: scale(1.1) !important;
+}
+
+.close-btn-fixed:focus {
+  outline: 2px solid #FFD700 !important;
+  outline-offset: 2px !important;
+}
+
+.accessibility-content-fixed {
+  padding: 20px !important;
+  max-height: calc(80vh - 80px) !important;
+  overflow-y: auto !important;
+}
+
+/* Mobile Panel Adjustments */
+@media (max-width: 768px) {
+  .accessibility-content-fixed {
+    max-height: calc(70vh - 60px) !important;
+    padding: 15px !important;
+  }
+  .accessibility-header-fixed { padding: 15px !important; }
+  .accessibility-header-fixed h3 { font-size: 14px !important; }
+}
+
+/* =========================================
+   Widget
+========================================= */
+.toggle-text-fixed {
+  font-family: 'IRANSans', sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.5px !important;
+  margin-top: 2px !important;
+}
+
+@media (max-width: 480px) {
+  .toggle-text-fixed { display: none !important; }
+
+  .accessibility-toggle-fixed {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 14px !important;
+  }
+}
+
+.accessibility-widget-fixed {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.accessibility-widget-fixed * { box-sizing: border-box !important; }
+
+/* Touch-specific Improvements */
+@media (hover: none) and (pointer: coarse) {
+  .theme-btn-fixed,
+  .font-btn-fixed,
+  .feature-btn-fixed,
+  .reset-btn-fixed {
+    min-width: 48px !important;
+    min-height: 48px !important;
+    padding: 14px 12px !important;
+  }
+
+  .accessibility-toggle-fixed {
+    min-width: 60px !important;
+    min-height: 60px !important;
+  }
+}

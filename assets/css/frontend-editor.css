@@ -1,0 +1,669 @@
+/*!
+ * Frontend Editor Styles
+ * TezNevisan Theme - Version 2.0.0
+ * Persian RTL Support with IRANSans & Roboto Slab fonts
+ */
+
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+
+.teznevisan-frontend-editor {
+    font-family: 'IRANSans', 'Roboto Slab', sans-serif !important;
+    direction: rtl;
+    text-align: right;
+}
+
+/* ==========================================================================
+   EDITOR TOOLBAR
+   ========================================================================== */
+
+.teznevisan-editor-toolbar {
+    background: #ffffff;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 32px;
+    z-index: 1000;
+}
+
+/* Admin bar adjustment */
+.admin-bar .teznevisan-editor-toolbar {
+    top: 64px;
+}
+
+.teznevisan-editor-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.editor-control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    border-left: 1px solid #e1e5e9;
+}
+
+.editor-control-group:first-child {
+    padding-right: 0;
+}
+
+.editor-control-group:last-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+/* ==========================================================================
+   EDITOR BUTTONS & INPUTS
+   ========================================================================== */
+
+.editor-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    color: #374151;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.editor-btn:hover {
+    background: #f3f4f6;
+    border-color: #1fa547;
+    color: #1fa547;
+}
+
+.editor-btn.active {
+    background: #1fa547;
+    border-color: #1fa547;
+    color: white;
+}
+
+.editor-btn i {
+    margin-left: 6px;
+}
+
+.editor-input {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: white;
+    color: #374151;
+    font-size: 14px;
+    font-family: 'IRANSans', sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+.editor-input:focus {
+    outline: none;
+    border-color: #1fa547;
+    box-shadow: 0 0 0 3px rgba(31, 165, 71, 0.1);
+}
+
+.editor-select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: white;
+    color: #374151;
+    font-size: 14px;
+    font-family: 'IRANSans', sans-serif;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+/* ==========================================================================
+   EDITABLE ELEMENTS
+   ========================================================================== */
+
+.teznevisan-editable {
+    position: relative;
+    outline: none;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.teznevisan-editable:hover {
+    box-shadow: 0 0 0 2px rgba(31, 165, 71, 0.3);
+}
+
+.teznevisan-editable:focus,
+.teznevisan-editable.editing {
+    box-shadow: 0 0 0 3px rgba(31, 165, 71, 0.5);
+    background: rgba(31, 165, 71, 0.05);
+}
+
+/* Edit Overlay */
+.edit-overlay {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #1fa547;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.teznevisan-editable:hover .edit-overlay {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   SAVE STATUS
+   ========================================================================== */
+
+.save-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.save-status.saving {
+    background: #fbbf24;
+    color: #92400e;
+}
+
+.save-status.saved {
+    background: #10b981;
+    color: white;
+}
+
+.save-status.error {
+    background: #ef4444;
+    color: white;
+}
+
+.save-status i {
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   MEDIA UPLOADER
+   ========================================================================== */
+
+.media-uploader {
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #f9fafb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.media-uploader:hover {
+    border-color: #1fa547;
+    background: rgba(31, 165, 71, 0.05);
+}
+
+.media-uploader.dragover {
+    border-color: #1fa547;
+    background: rgba(31, 165, 71, 0.1);
+}
+
+.media-uploader-icon {
+    font-size: 48px;
+    color: #9ca3af;
+    margin-bottom: 16px;
+}
+
+.media-uploader-text {
+    color: #6b7280;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.media-uploader-hint {
+    color: #9ca3af;
+    font-size: 14px;
+    font-family: 'IRANSans', sans-serif;
+}
+
+/* ==========================================================================
+   COLOR PICKER
+   ========================================================================== */
+
+.color-picker-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.color-picker-preview {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.color-picker-preview:hover {
+    border-color: #1fa547;
+    transform: scale(1.1);
+}
+
+.color-picker-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   SETTINGS PANEL
+   ========================================================================== */
+
+.editor-settings-panel {
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    height: 100vh;
+    background: white;
+    border-right: 1px solid #e1e5e9;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.editor-settings-panel.open {
+    left: 0;
+}
+
+.settings-panel-header {
+    padding: 20px;
+    border-bottom: 1px solid #e1e5e9;
+    background: #f8f9fa;
+}
+
+.settings-panel-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.settings-panel-content {
+    padding: 20px;
+}
+
+.settings-group {
+    margin-bottom: 30px;
+}
+
+.settings-group-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 15px;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.settings-field {
+    margin-bottom: 20px;
+}
+
+.settings-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.settings-input,
+.settings-textarea,
+.settings-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: white;
+    color: #374151;
+    font-size: 14px;
+    font-family: 'IRANSans', sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+.settings-textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* ==========================================================================
+   TOGGLE SWITCH
+   ========================================================================== */
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 24px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: #1fa547;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+/* ==========================================================================
+   MODAL
+   ========================================================================== */
+
+.editor-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.editor-modal.open {
+    display: flex;
+}
+
+.editor-modal-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.editor-modal-header {
+    padding: 24px;
+    border-bottom: 1px solid #e1e5e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editor-modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.editor-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.editor-modal-close:hover {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.editor-modal-body {
+    padding: 24px;
+}
+
+/* ==========================================================================
+   LOADING STATES
+   ========================================================================== */
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9998;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+.loading-overlay.show {
+    display: flex;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e1e5e9;
+    border-top: 4px solid #1fa547;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   NOTIFICATIONS
+   ========================================================================== */
+
+.editor-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    z-index: 10001;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    font-family: 'IRANSans', sans-serif;
+    min-width: 300px;
+}
+
+.editor-notification.show {
+    transform: translateX(0);
+}
+
+.editor-notification.success {
+    background: #10b981;
+}
+
+.editor-notification.error {
+    background: #ef4444;
+}
+
+.editor-notification.warning {
+    background: #f59e0b;
+}
+
+.editor-notification.info {
+    background: #3b82f6;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .teznevisan-editor-toolbar {
+        padding: 12px;
+        position: relative;
+        top: auto;
+    }
+
+    .teznevisan-editor-controls {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .editor-control-group {
+        padding: 0;
+        border-left: none;
+        border-bottom: 1px solid #e1e5e9;
+        padding-bottom: 12px;
+    }
+
+    .editor-control-group:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .editor-settings-panel {
+        width: 100%;
+        left: -100%;
+    }
+
+    .editor-modal-content {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .editor-notification {
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+        transform: translateY(-100px);
+    }
+
+    .editor-notification.show {
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .teznevisan-editable:hover {
+        box-shadow: 0 0 0 3px #000;
+    }
+
+    .teznevisan-editable:focus,
+    .teznevisan-editable.editing {
+        box-shadow: 0 0 0 4px #000;
+        background: #fff;
+    }
+
+    .editor-btn {
+        border-width: 2px;
+    }
+
+    .editor-btn:hover,
+    .editor-btn.active {
+        border-width: 3px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .loading-spinner {
+        animation: none;
+        border-top-color: transparent;
+    }
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+    .teznevisan-editor-toolbar,
+    .editor-settings-panel,
+    .edit-overlay,
+    .editor-modal,
+    .loading-overlay,
+    .editor-notification {
+        display: none !important;
+    }
+
+    .teznevisan-editable {
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+}

@@ -1,0 +1,291 @@
+/**
+ * TinyMCE Content Styles
+ * IranSans Font and RTL Support
+ */
+
+@font-face {
+    font-family: 'IranSans';
+    src: url('../fonts/IranSans.woff2') format('woff2'),
+         url('../fonts/IranSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Base Content Styling */
+body {
+    font-family: IranSans, Arial, sans-serif !important;
+    direction: rtl !important;
+    text-align: right !important;
+    line-height: 1.6 !important;
+    padding: 20px !important;
+    margin: 0 !important;
+    background: #fff !important;
+    color: #333 !important;
+    font-size: 16px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: IranSans, Arial, sans-serif !important;
+    font-weight: bold !important;
+    line-height: 1.4 !important;
+    margin: 1.5rem 0 1rem 0 !important;
+    color: #2c3e50 !important;
+    text-align: right !important;
+}
+
+h1 { font-size: 2.5rem !important; }
+h2 { font-size: 2rem !important; }
+h3 { font-size: 1.75rem !important; }
+h4 { font-size: 1.5rem !important; }
+h5 { font-size: 1.25rem !important; }
+h6 { font-size: 1.1rem !important; }
+
+p {
+    margin: 0 0 1rem 0 !important;
+    font-family: IranSans, Arial, sans-serif !important;
+    line-height: 1.6 !important;
+    text-align: right !important;
+}
+
+/* Lists */
+ul, ol {
+    margin: 1rem 0 !important;
+    padding-right: 2rem !important;
+    padding-left: 0 !important;
+    text-align: right !important;
+}
+
+li {
+    margin: 0.5rem 0 !important;
+    text-align: right !important;
+}
+
+/* Blockquotes */
+blockquote {
+    border-right: 4px solid #3498db !important;
+    border-left: none !important;
+    padding: 1rem 2rem !important;
+    margin: 1rem 0 !important;
+    background: #f8f9fa !important;
+    font-style: italic !important;
+    text-align: right !important;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin: 1rem 0 !important;
+    direction: rtl !important;
+    font-family: IranSans, Arial, sans-serif !important;
+}
+
+table td, table th {
+    border: 1px solid #ddd !important;
+    padding: 12px !important;
+    text-align: right !important;
+    font-family: IranSans, Arial, sans-serif !important;
+}
+
+table th {
+    background-color: #f2f2f2 !important;
+    font-weight: bold !important;
+}
+
+/* Font Awesome Icons */
+.fa, .fas, .far, .fal, .fad, .fab {
+    font-family: 'Font Awesome 6 Pro' !important;
+    font-weight: 900;
+    display: inline-block;
+    margin: 0 0.25rem;
+}
+
+.fa-sm { font-size: 0.875em; }
+.fa-lg { font-size: 1.33em; line-height: 0.75em; vertical-align: -0.0667em; }
+.fa-2x { font-size: 2em; }
+.fa-3x { font-size: 3em; }
+
+/* Code Styling */
+code {
+    background: #f4f4f4 !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-family: 'Courier New', monospace !important;
+    direction: ltr !important;
+    text-align: left !important;
+    display: inline-block !important;
+    color: #e83e8c !important;
+    font-size: 0.9em !important;
+}
+
+pre {
+    background: #f4f4f4 !important;
+    padding: 1rem !important;
+    border-radius: 8px !important;
+    overflow-x: auto !important;
+    direction: ltr !important;
+    text-align: left !important;
+    font-family: 'Courier New', monospace !important;
+    line-height: 1.4 !important;
+}
+
+/* Utility Classes */
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-justify { text-align: justify !important; }
+
+.highlight {
+    background-color: #fff3cd !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 0.25rem !important;
+}
+
+.text-primary { color: #007bff !important; }
+.text-secondary { color: #6c757d !important; }
+.text-success { color: #28a745 !important; }
+.text-danger { color: #dc3545 !important; }
+.text-warning { color: #ffc107 !important; }
+.text-info { color: #17a2b8 !important; }
+.text-light { color: #f8f9fa !important; }
+.text-dark { color: #343a40 !important; }
+
+.bg-light { 
+    background-color: #f8f9fa !important; 
+    padding: 1rem !important; 
+    border-radius: 0.5rem !important; 
+    border: 1px solid #dee2e6 !important;
+}
+
+.bg-primary { 
+    background-color: #007bff !important; 
+    color: white !important; 
+    padding: 0.5rem 1rem !important; 
+    border-radius: 0.5rem !important; 
+}
+
+.bg-secondary { 
+    background-color: #6c757d !important; 
+    color: white !important; 
+    padding: 0.5rem 1rem !important; 
+    border-radius: 0.5rem !important; 
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem !important;
+    margin: 0.25rem !important;
+    border: 2px solid transparent !important;
+    border-radius: 0.5rem !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    font-family: IranSans, Arial, sans-serif !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    transition: all 0.2s ease !important;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3 !important;
+    border-color: #004085 !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-secondary {
+    color: #fff !important;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62 !important;
+    border-color: #4e555b !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Images */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+
+/* Links */
+a {
+    color: #007bff !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+a:hover {
+    color: #0056b3 !important;
+    text-decoration: underline !important;
+}
+
+/* Form Elements */
+input, textarea, select {
+    font-family: IranSans, Arial, sans-serif !important;
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* Custom TinyMCE Overrides */
+.mce-content-body {
+    font-family: IranSans, Arial, sans-serif !important;
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.mce-content-body p[dir=ltr] {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+.mce-content-body h1[dir=ltr],
+.mce-content-body h2[dir=ltr],
+.mce-content-body h3[dir=ltr],
+.mce-content-body h4[dir=ltr],
+.mce-content-body h5[dir=ltr],
+.mce-content-body h6[dir=ltr] {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px !important;
+        font-size: 14px !important;
+    }
+    
+    .classic-editor-wrapper .tox .tox-toolbar__group {
+        margin-bottom: 4px;
+    }
+    
+    .classic-editor-wrapper .tox .tox-tbtn {
+        margin: 1px;
+        padding: 6px;
+    }
+    
+    h1 { font-size: 2rem !important; }
+    h2 { font-size: 1.75rem !important; }
+    h3 { font-size: 1.5rem !important; }
+}
+
+/* Print Styles */
+@media print {
+    .fa, .fas, .far, .fal, .fad, .fab {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
