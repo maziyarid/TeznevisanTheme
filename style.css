@@ -1,0 +1,15 @@
+/*
+Theme Name: TezNevisan Pro
+Description: Professional academic services WordPress theme with RTL support, accessibility features, and modern design.
+Author: TezNevisan Team
+Version: 1.0
+License: GPL v2 or later
+Text Domain: teznevisan
+Domain Path: /languages
+Tags: rtl-language-support, accessibility-ready, custom-header, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme supports the WordPress block editor and is optimized for academic service websites.
+*/
+
+/* Import Main Styles */
+@import url('assets/css/main.css');

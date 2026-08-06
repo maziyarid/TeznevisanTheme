@@ -1,0 +1,23 @@
+/* Additional admin styles for services meta box */
+.teznevisan-service-meta .fas,
+.teznevisan-service-meta .far,
+.teznevisan-service-meta .fab {
+    font-family: "Font Awesome 7 Pro", "Font Awesome 7 Free" !important;
+    font-weight: 900;
+}
+
+/* Ensure icons display correctly in classic editor */
+.wp-editor-container .fas,
+.wp-editor-container .far,
+.wp-editor-container .fab {
+    font-family: "Font Awesome 7 Pro", "Font Awesome 7 Free" !important;
+}
+
+/* Fix icon alignment */
+.meta-tab-btn i,
+.widget-title i,
+.section-title i {
+    display: inline-block;
+    width: 1.2em;
+    text-align: center;
+}

@@ -1,0 +1,974 @@
+# Copyright (C) 2024 TezNevisan Team
+# This file is distributed under the same license as the TezNevisan Pro package.
+msgid ""
+msgstr ""
+"Project-Id-Version: TezNevisan Pro 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/teznevisan\n"
+"POT-Creation-Date: 2024-01-01 12:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-01-01 12:00:00+00:00\n"
+"Last-Translator: TezNevisan Team\n"
+"Language-Team: Persian\n"
+"Language: fa_IR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: functions.php:45
+msgid "Primary Menu"
+msgstr "منوی اصلی"
+
+#: functions.php:46
+msgid "Footer Menu"
+msgstr "منوی فوتر"
+
+#: functions.php:47
+msgid "Mobile Menu"
+msgstr "منوی موبایل"
+
+#: functions.php:85
+msgid "Main Sidebar"
+msgstr "نوار کناری اصلی"
+
+#: functions.php:86
+msgid "Main sidebar area"
+msgstr "ناحیه نوار کناری اصلی"
+
+#: functions.php:93
+msgid "Footer Widget 1"
+msgstr "ویجت فوتر ۱"
+
+#: functions.php:94
+msgid "Footer widget area 1"
+msgstr "ناحیه ویجت فوتر ۱"
+
+#: functions.php:101
+msgid "Footer Widget 2"
+msgstr "ویجت فوتر ۲"
+
+#: functions.php:102
+msgid "Footer widget area 2"
+msgstr "ناحیه ویجت فوتر ۲"
+
+#: functions.php:109
+msgid "Footer Widget 3"
+msgstr "ویجت فوتر ۳"
+
+#: functions.php:110
+msgid "Footer widget area 3"
+msgstr "ناحیه ویجت فوتر ۳"
+
+#: functions.php:120
+msgid "Services"
+msgstr "خدمات"
+
+#: functions.php:121
+msgid "Service"
+msgstr "خدمت"
+
+#: functions.php:122
+msgid "Add New Service"
+msgstr "افزودن خدمت جدید"
+
+#: functions.php:123
+msgid "Add New Service"
+msgstr "افزودن خدمت جدید"
+
+#: functions.php:124
+msgid "Edit Service"
+msgstr "ویرایش خدمت"
+
+#: functions.php:135
+msgid "Testimonials"
+msgstr "نظرات مشتریان"
+
+#: functions.php:136
+msgid "Testimonial"
+msgstr "نظر مشتری"
+
+#: functions.php:143
+msgid "Team Members"
+msgstr "اعضای تیم"
+
+#: functions.php:144
+msgid "Team Member"
+msgstr "عضو تیم"
+
+msgid "Professional Academic Writing Services"
+msgstr "خدمات حرفه‌ای نگارش دانشگاهی"
+
+msgid "Quality, Originality, and Complete Support"
+msgstr "کیفیت، اصالت و پشتیبانی کامل"
+
+msgid "Expert team of TezNevisan with over 450 experienced researchers and scholars, ready to provide comprehensive thesis writing services in all fields and academic levels."
+msgstr "تیم متخصص تزنویسان با بیش از ۴۵۰ محقق و پژوهشگر مجرب، آماده ارائه خدمات جامع پایان‌نامه‌نویسی در تمامی رشته‌ها و مقاطع تحصیلی."
+
+msgid "Quality & Originality Guarantee"
+msgstr "تضمین کیفیت و اصالت"
+
+msgid "On-time Delivery"
+msgstr "تحویل به موقع"
+
+msgid "24/7 Support"
+msgstr "پشتیبانی ۲۴/۷"
+
+msgid "Complete Confidentiality"
+msgstr "محرمانگی کامل"
+
+msgid "Get Free Consultation"
+msgstr "دریافت مشاوره رایگان"
+
+msgid "View Services"
+msgstr "مشاهده خدمات"
+
+msgid "Expert Researchers"
+msgstr "محقق متخصص"
+
+msgid "Customer Satisfaction"
+msgstr "رضایت مشتری"
+
+msgid "Originality Guarantee"
+msgstr "تضمین اصالت"
+
+msgid "Reputable Universities"
+msgstr "دانشگاه معتبر"
+
+msgid "Our Professional Services"
+msgstr "خدمات حرفه‌ای ما"
+
+msgid "Comprehensive academic writing and research services for all educational levels"
+msgstr "خدمات جامع نگارش دانشگاهی و پژوهش برای تمامی مقاطع تحصیلی"
+
+msgid "View All Services"
+msgstr "مشاهده همه خدمات"
+
+msgid "Latest Articles & News"
+msgstr "آخرین مقالات و اخبار"
+
+msgid "Stay updated with our latest insights and academic writing tips"
+msgstr "از آخرین بینش‌ها و نکات نگارش دانشگاهی ما مطلع شوید"
+
+msgid "Blog"
+msgstr "وبلاگ"
+
+msgid "No Posts Found"
+msgstr "هیچ مطلبی یافت نشد"
+
+msgid "Sorry, no posts were found. Please try again later."
+msgstr "متأسفانه هیچ مطلبی یافت نشد. لطفاً بعداً دوباره تلاش کنید."
+
+msgid "Back to Homepage"
+msgstr "بازگشت به صفحه اصلی"
+
+msgid "Home"
+msgstr "خانه"
+
+msgid "About Us"
+msgstr "درباره ما"
+
+msgid "Contact Us"
+msgstr "تماس با ما"
+
+msgid "FAQ"
+msgstr "سوالات متداول"
+
+msgid "Pricing"
+msgstr "تعرفه"
+
+msgid "Portfolio"
+msgstr "نمونه کارها"
+
+msgid "Terms & Conditions"
+msgstr "شرایط و قوانین"
+
+msgid "Privacy Policy"
+msgstr "حریم خصوصی"
+
+msgid "Terms of Use"
+msgstr "شرایط استفاده"
+
+msgid "Sitemap"
+msgstr "نقشه سایت"
+
+msgid "All rights reserved."
+msgstr "تمامی حقوق محفوظ است."
+
+msgid "Newsletter Subscription"
+msgstr "عضویت در خبرنامه"
+
+msgid "Stay updated with our latest articles and offers"
+msgstr "از آخرین مقالات و پیشنهادات ما مطلع شوید"
+
+msgid "Your email"
+msgstr "ایمیل شما"
+
+msgid "Back to top"
+msgstr "بازگشت به بالا"
+
+msgid "Contact options"
+msgstr "راه‌های ارتباطی"
+
+msgid "Phone call"
+msgstr "تماس تلفنی"
+
+msgid "Direct Call"
+msgstr "تماس مستقیم"
+
+msgid "WhatsApp"
+msgstr "واتساپ"
+
+msgid "Telegram"
+msgstr "تلگرام"
+
+msgid "Email"
+msgstr "ایمیل"
+
+msgid "Skip to main content"
+msgstr "رفتن به محتوای اصلی"
+
+msgid "Light Mode"
+msgstr "حالت روشن"
+
+msgid "Switch to light mode"
+msgstr "تغییر به حالت روشن"
+
+msgid "Dark Mode"
+msgstr "حالت تاریک"
+
+msgid "Switch to dark mode"
+msgstr "تغییر به حالت تاریک"
+
+msgid "Reading Mode"
+msgstr "حالت مطالعه"
+
+msgid "Switch to reading mode"
+msgstr "تغییر به حالت مطالعه"
+
+msgid "Increase font size"
+msgstr "افزایش اندازه فونت"
+
+msgid "Decrease font size"
+msgstr "کاهش اندازه فونت"
+
+msgid "High contrast"
+msgstr "کنتراست بالا"
+
+msgid "Reading guide"
+msgstr "راهنمای خواندن"
+
+msgid "Reset all"
+msgstr "بازنشانی همه"
+
+msgid "Main Menu"
+msgstr "منوی اصلی"
+
+msgid "Phone number %s"
+msgstr "شماره تماس %s"
+
+msgid "Search"
+msgstr "جستجو"
+
+msgid "Open search"
+msgstr "باز کردن جستجو"
+
+msgid "Place Order"
+msgstr "ثبت سفارش"
+
+msgid "Mobile menu"
+msgstr "منوی موبایل"
+
+msgid "Mobile Menu"
+msgstr "منوی موبایل"
+
+msgid "Close menu"
+msgstr "بستن منو"
+
+msgid "Close search"
+msgstr "بستن جستجو"
+
+msgid "Search the site"
+msgstr "جستجو در سایت"
+
+msgid "Search the site..."
+msgstr "جستجو در سایت..."
+
+msgid "Search term"
+msgstr "عبارت جستجو"
+
+msgid "Our Services"
+msgstr "خدمات ما"
+
+msgid "Useful Links"
+msgstr "لینک‌های مفید"
+
+msgid "Contact Information"
+msgstr "اطلاعات تماس"
+
+msgid "Working Hours"
+msgstr "ساعات کاری"
+
+msgid "24/7 Support Available"
+msgstr "پشتیبانی ۲۴/۷ در دسترس"
+
+msgid "Follow Us"
+msgstr "ما را دنبال کنید"
+
+msgid "Breadcrumbs"
+msgstr "مسیر صفحه"
+
+msgid "Search Results"
+msgstr "نتایج جستجو"
+
+msgid "Pagination Navigation"
+msgstr "ناوبری صفحه‌بندی"
+
+msgid "Previous"
+msgstr "قبلی"
+
+msgid "Next"
+msgstr "بعدی"
+
+msgid "Page Not Found"
+msgstr "صفحه یافت نشد"
+
+msgid "Sorry, the page you are looking for could not be found. It might have been moved, deleted, or you entered the wrong URL."
+msgstr "متأسفانه صفحه‌ای که به دنبال آن هستید یافت نشد. ممکن است جابجا شده، حذف شده یا آدرس اشتباهی وارد کرده باشید."
+
+msgid "Go Back"
+msgstr "بازگشت"
+
+msgid "Or search for what you need:"
+msgstr "یا آنچه نیاز دارید جستجو کنید:"
+
+msgid "Helpful Links:"
+msgstr "لینک‌های مفید:"
+
+msgid "Leave a Comment"
+msgstr "ثبت نظر"
+
+msgid "Leave a Reply to %s"
+msgstr "پاسخ به %s"
+
+msgid "Cancel Reply"
+msgstr "لغو پاسخ"
+
+msgid "Post Comment"
+msgstr "ارسال نظر"
+
+msgid "Comment"
+msgstr "نظر"
+
+msgid "Name"
+msgstr "نام"
+
+msgid "Website"
+msgstr "وب‌سایت"
+
+msgid "Your comment is awaiting moderation."
+msgstr "نظر شما در انتظار تأیید است."
+
+msgid "Reply"
+msgstr "پاسخ"
+
+msgid "Comments are closed."
+msgstr "امکان ثبت نظر وجود ندارد."
+
+msgid "at"
+msgstr "در"
+
+msgid "Quick Contact"
+msgstr "تماس سریع"
+
+msgid "Recent Posts"
+msgstr "مطالب اخیر"
+
+msgid "General Inquiry"
+msgstr "استعلام عمومی"
+
+msgid "N/A"
+msgstr "ندارد"
+
+msgid "Professional academic services WordPress theme with RTL support, accessibility features, and modern design."
+msgstr "قالب وردپرس خدمات دانشگاهی حرفه‌ای با پشتیبانی RTL، ویژگی‌های دسترسی و طراحی مدرن."
+
+msgid "No Services Found"
+msgstr "هیچ خدمتی یافت نشد"
+
+msgid "We are currently updating our services. Please check back soon."
+msgstr "در حال حاضر خدمات خود را به‌روزرسانی می‌کنیم. لطفاً به زودی مراجعه کنید."
+
+msgid "With quality guarantee, originality and complete support"
+msgstr "با تضمین کیفیت، اصالت و پشتیبانی کامل"
+
+msgid "Free Consultation & Order"
+msgstr "مشاوره رایگان و ثبت سفارش"
+
+msgid "Related Services"
+msgstr "خدمات مرتبط"
+
+msgid "Other services that might interest you"
+msgstr "سایر خدماتی که ممکن است برایتان جالب باشد"
+
+msgid "Learn More"
+msgstr "اطلاعات بیشتر"
+
+msgid "Ready to start your academic success journey?"
+msgstr "آماده شروع مسیر موفقیت تحصیلی خود هستید؟"
+
+msgid "Contact us now and benefit from free consultation with TezNevisan experts."
+msgstr "همین حالا با ما تماس بگیرید و از مشاوره رایگان متخصصان تزنویسان بهره‌مند شوید."
+
+msgid "Request Free Consultation"
+msgstr "درخواست مشاوره رایگان"
+
+msgid "Direct Call: %s"
+msgstr "تماس مستقیم: %s"
+
+msgid "Free Service Consultation"
+msgstr "مشاوره رایگان خدمات"
+
+msgid "Enter your information so our experts can contact you as soon as possible and provide the necessary guidance."
+msgstr "اطلاعات خود را وارد کنید تا متخصصان ما در اسرع وقت با شما تماس بگیرند و راهنمایی‌های لازم را ارائه دهند."
+
+msgid "Expert Consultation"
+msgstr "مشاوره تخصصی"
+
+msgid "Cost Estimation"
+msgstr "برآورد هزینه"
+
+msgid "Answer Questions"
+msgstr "پاسخ به سوالات"
+
+msgid "Full Name"
+msgstr "نام و نام خانوادگی"
+
+msgid "Phone Number"
+msgstr "شماره تماس"
+
+msgid "Email Address"
+msgstr "آدرس ایمیل"
+
+msgid "Field of Study"
+msgstr "رشته تحصیلی"
+
+msgid "Select Field"
+msgstr "انتخاب رشته"
+
+msgid "Engineering"
+msgstr "مهندسی"
+
+msgid "Medical"
+msgstr "پزشکی"
+
+msgid "Humanities"
+msgstr "علوم انسانی"
+
+msgid "Basic Sciences"
+msgstr "علوم پایه"
+
+msgid "Art"
+msgstr "هنر"
+
+msgid "Management"
+msgstr "مدیریت"
+
+msgid "Other"
+msgstr "سایر"
+
+msgid "Academic Level"
+msgstr "مقطع تحصیلی"
+
+msgid "Select Level"
+msgstr "انتخاب مقطع"
+
+msgid "Bachelor"
+msgstr "کارشناسی"
+
+msgid "Masters"
+msgstr "کارشناسی ارشد"
+
+msgid "PhD"
+msgstr "دکتری"
+
+msgid "Description or Topic"
+msgstr "توضیحات یا موضوع"
+
+msgid "Topic, initial questions, or any details you find necessary..."
+msgstr "موضوع، سوالات اولیه، یا هر جزئیاتی که لازم می‌دانید..."
+
+msgid "Your information will remain completely confidential."
+msgstr "اطلاعات شما کاملاً محرمانه باقی می‌ماند."
+
+msgid "Send Request"
+msgstr "ارسال درخواست"
+
+msgid "Sending..."
+msgstr "در حال ارسال..."
+
+msgid "Starting from 2M Toman"
+msgstr "شروع از ۲ میلیون تومان"
+
+msgid "Order Now"
+msgstr "سفارش دهید"
+
+msgid "Proposal Writing"
+msgstr "نگارش پروپوزال"
+
+msgid "Professional proposal writing with approval guarantee for all fields and academic levels."
+msgstr "نگارش حرفه‌ای پروپوزال با تضمین تصویب برای تمامی رشته‌ها و مقاطع تحصیلی."
+
+msgid "Topic selection"
+msgstr "انتخاب موضوع"
+
+msgid "Literature review"
+msgstr "بررسی ادبیات"
+
+msgid "Methodology design"
+msgstr "طراحی روش‌شناسی"
+
+msgid "Approval guarantee"
+msgstr "تضمین تصویب"
+
+msgid "Starting from 800K Toman"
+msgstr "شروع از ۸۰۰ هزار تومان"
+
+msgid "Article Writing"
+msgstr "نگارش مقاله"
+
+msgid "Writing scientific articles for ISI and ISC journals with publication guarantee."
+msgstr "نگارش مقالات علمی برای مجلات ISI و ISC با تضمین چاپ."
+
+msgid "ISI/ISC articles"
+msgstr "مقالات ISI/ISC"
+
+msgid "Journal selection"
+msgstr "انتخاب مجله"
+
+msgid "Peer review support"
+msgstr "پشتیبانی داوری"
+
+msgid "Publication guarantee"
+msgstr "تضمین چاپ"
+
+msgid "Starting from 1.5M Toman"
+msgstr "شروع از ۱.۵ میلیون تومان"
+
+msgid "Thesis Writing"
+msgstr "نگارش پایان‌نامه"
+
+msgid "Complete thesis writing from chapter 1 to defense, following university standards and scientific methodology."
+msgstr "نگارش کامل پایان‌نامه از فصل ۱ تا دفاع، با رعایت استانداردهای دانشگاهی و روش‌شناسی علمی."
+
+msgid "Topic selection and proposal"
+msgstr "انتخاب موضوع و پروپوزال"
+
+msgid "Writing chapters 1-5"
+msgstr "نگارش فصول ۱ تا ۵"
+
+msgid "Statistical analysis"
+msgstr "تحلیل آماری"
+
+msgid "Editing and formatting"
+msgstr "ویرایش و فرمت‌بندی"
+
+msgid "Professional Translation"
+msgstr "ترجمه تخصصی"
+
+msgid "Programming Projects"
+msgstr "پروژه‌های برنامه‌نویسی"
+
+msgid "Search Results for: %s"
+msgstr "نتایج جستجو برای: %s"
+
+msgid "Found %d result"
+msgid_plural "Found %d results"
+msgstr[0] "%d نتیجه یافت شد"
+msgstr[1] "%d نتیجه یافت شد"
+
+msgid "Read More"
+msgstr "ادامه مطلب"
+
+msgid "No Results Found"
+msgstr "نتیجه‌ای یافت نشد"
+
+msgid "Sorry, no results were found for your search. Please try different keywords."
+msgstr "متأسفانه برای جستجوی شما نتیجه‌ای یافت نشد. لطفاً کلمات کلیدی دیگری امتحان کنید."
+
+msgid "Search Suggestions:"
+msgstr "پیشنهادات جستجو:"
+
+msgid "Check your spelling"
+msgstr "املای خود را بررسی کنید"
+
+msgid "Try different keywords"
+msgstr "کلمات کلیدی دیگری امتحان کنید"
+
+msgid "Use more general terms"
+msgstr "از عبارات کلی‌تر استفاده کنید"
+
+msgid "Popular Services:"
+msgstr "خدمات محبوب:"
+
+msgid "Send us a Message"
+msgstr "پیام بفرستید"
+
+msgid "Fill out the form below and our experts will contact you as soon as possible."
+msgstr "فرم زیر را پر کنید تا متخصصان ما در اسرع وقت با شما تماس بگیرند."
+
+msgid "Subject"
+msgstr "موضوع"
+
+msgid "Select Subject"
+msgstr "انتخاب موضوع"
+
+msgid "Translation"
+msgstr "ترجمه"
+
+msgid "Message"
+msgstr "پیام"
+
+msgid "Please describe your project requirements in detail..."
+msgstr "لطفاً نیازهای پروژه خود را به تفصیل شرح دهید..."
+
+msgid "Send Message"
+msgstr "ارسال پیام"
+
+msgid "Address"
+msgstr "آدرس"
+
+msgid "Our Expert Team"
+msgstr "تیم متخصص ما"
+
+msgid "Meet our professional researchers and academic writers"
+msgstr "با محققان حرفه‌ای و نویسندگان دانشگاهی ما آشنا شوید"
+
+msgid "Our Values"
+msgstr "ارزش‌های ما"
+
+msgid "The principles that guide our work and commitment to excellence"
+msgstr "اصولی که کار ما و تعهد به تعالی را هدایت می‌کند"
+
+msgid "Quality Assurance"
+msgstr "تضمین کیفیت"
+
+msgid "We guarantee the highest quality in all our academic writing services with rigorous quality control processes."
+msgstr "ما بالاترین کیفیت را در تمامی خدمات نگارش دانشگاهی خود با فرآیندهای دقیق کنترل کیفیت تضمین می‌کنیم."
+
+msgid "Confidentiality"
+msgstr "محرمانگی"
+
+msgid "Complete privacy and confidentiality of all client information and projects is our top priority."
+msgstr "حریم خصوصی و محرمانگی کامل تمامی اطلاعات و پروژه‌های مشتریان اولویت اصلی ماست."
+
+msgid "Timely Delivery"
+msgstr "تحویل به موقع"
+
+msgid "We are committed to delivering all projects on time according to agreed schedules and deadlines."
+msgstr "ما متعهد به تحویل تمامی پروژه‌ها در زمان مقرر طبق برنامه‌زمانی و مهلت‌های توافق شده هستیم."
+
+msgid "Round-the-clock customer support to assist you throughout your academic journey."
+msgstr "پشتیبانی شبانه‌روزی مشتریان برای کمک به شما در طول مسیر تحصیلی‌تان."
+
+msgid "Years of Experience"
+msgstr "سال تجربه"
+
+msgid "Completed Projects"
+msgstr "پروژه تکمیل شده"
+
+msgid "TezNevisan Theme Options"
+msgstr "تنظیمات قالب تزنویسان"
+
+msgid "Theme Options"
+msgstr "تنظیمات قالب"
+
+msgid "Customizer"
+msgstr "شخصی‌سازی"
+
+msgid "Customize your theme colors, hero section, and other visual elements."
+msgstr "رنگ‌های قالب، بخش اصلی و سایر عناصر بصری را شخصی‌سازی کنید."
+
+msgid "Open Customizer"
+msgstr "باز کردن شخصی‌سازی"
+
+msgid "Menus"
+msgstr "منوها"
+
+msgid "Manage your navigation menus for header, footer, and mobile."
+msgstr "منوهای ناوبری برای هدر، فوتر و موبایل را مدیریت کنید."
+
+msgid "Manage Menus"
+msgstr "مدیریت منوها"
+
+msgid "Widgets"
+msgstr "ویجت‌ها"
+
+msgid "Add and configure widgets for your sidebar and footer areas."
+msgstr "ویجت‌ها را برای نوار کناری و نواحی فوتر اضافه و پیکربندی کنید."
+
+msgid "Manage Widgets"
+msgstr "مدیریت ویجت‌ها"
+
+msgid "Add and manage your services with custom fields and features."
+msgstr "خدمات خود را با فیلدها و ویژگی‌های سفارشی اضافه و مدیریت کنید."
+
+msgid "Manage Services"
+msgstr "مدیریت خدمات"
+
+msgid "Contact Submissions"
+msgstr "پیام‌های تماس"
+
+msgid "View and manage contact form submissions from your website."
+msgstr "پیام‌های فرم تماس وب‌سایت خود را مشاهده و مدیریت کنید."
+
+msgid "View Submissions"
+msgstr "مشاهده پیام‌ها"
+
+msgid "Newsletter Subscribers"
+msgstr "مشترکان خبرنامه"
+
+msgid "Manage your newsletter subscribers and send updates."
+msgstr "مشترکان خبرنامه خود را مدیریت کرده و به‌روزرسانی‌ها ارسال کنید."
+
+msgid "View Subscribers"
+msgstr "مشاهده مشترکان"
+
+msgid "Theme Information"
+msgstr "اطلاعات قالب"
+
+msgid "Theme Name:"
+msgstr "نام قالب:"
+
+msgid "Version:"
+msgstr "نسخه:"
+
+msgid "Author:"
+msgstr "نویسنده:"
+
+msgid "Description:"
+msgstr "توضیحات:"
+
+msgid "TezNevisan Statistics"
+msgstr "آمار تزنویسان"
+
+msgid "Blog Posts"
+msgstr "مطالب وبلاگ"
+
+msgid "Quick Actions"
+msgstr "اقدامات سریع"
+
+msgid "Add New Service"
+msgstr "افزودن خدمت جدید"
+
+msgid "Customize Theme"
+msgstr "شخصی‌سازی قالب"
+
+msgid "View Contacts"
+msgstr "مشاهده تماس‌ها"
+
+msgid "Welcome to TezNevisan Theme!"
+msgstr "به قالب تزنویسان خوش آمدید!"
+
+msgid "Thank you for choosing TezNevisan theme. To get started, please complete the initial setup:"
+msgstr "از انتخاب قالب تزنویسان سپاسگزاریم. برای شروع، لطفاً تنظیمات اولیه را کامل کنید:"
+
+msgid "Set up your navigation menus"
+msgstr "منوهای ناوبری خود را تنظیم کنید"
+
+msgid "Customize your theme colors and settings"
+msgstr "رنگ‌ها و تنظیمات قالب خود را شخصی‌سازی کنید"
+
+msgid "Add your contact information"
+msgstr "اطلاعات تماس خود را اضافه کنید"
+
+msgid "Create your first service"
+msgstr "اولین خدمت خود را ایجاد کنید"
+
+msgid "Start Setup"
+msgstr "شروع تنظیمات"
+
+msgid "Dismiss"
+msgstr "رد کردن"
+
+msgid "Service Details"
+msgstr "جزئیات خدمت"
+
+msgid "Service Icon"
+msgstr "آیکون خدمت"
+
+msgid "FontAwesome icon class (e.g., fas fa-graduation-cap)"
+msgstr "کلاس آیکون FontAwesome (مثال: fas fa-graduation-cap)"
+
+msgid "Starting Price"
+msgstr "قیمت شروع"
+
+msgid "Featured Service"
+msgstr "خدمت ویژه"
+
+msgid "Show this service on homepage"
+msgstr "این خدمت را در صفحه اصلی نمایش بده"
+
+msgid "Service Features"
+msgstr "ویژگی‌های خدمت"
+
+msgid "Feature description"
+msgstr "توضیحات ویژگی"
+
+msgid "Remove"
+msgstr "حذف"
+
+msgid "Add Feature"
+msgstr "افزودن ویژگی"
+
+msgid "TezNevisan Services"
+msgstr "خدمات تزنویسان"
+
+msgid "Display featured services"
+msgstr "نمایش خدمات ویژه"
+
+msgid "Title:"
+msgstr "عنوان:"
+
+msgid "Number of services:"
+msgstr "تعداد خدمات:"
+
+msgid "TezNevisan Contact Info"
+msgstr "اطلاعات تماس تزنویسان"
+
+msgid "Display contact information"
+msgstr "نمایش اطلاعات تماس"
+
+msgid "Show contact button"
+msgstr "نمایش دکمه تماس"
+
+msgid "Security check failed"
+msgstr "بررسی امنیتی ناموفق"
+
+msgid "Please fill in all required fields."
+msgstr "لطفاً تمامی فیلدهای مورد نیاز را پر کنید."
+
+msgid "Please enter a valid email address."
+msgstr "لطفاً یک آدرس ایمیل معتبر وارد کنید."
+
+msgid "[%s] New Contact Form Submission"
+msgstr "[%s] پیام جدید فرم تماس"
+
+msgid "New contact form submission from %s:\n\n"
+msgstr "پیام جدید فرم تماس از %s:\n\n"
+
+msgid "Submitted on: %s"
+msgstr "ارسال شده در: %s"
+
+msgid "Contact from %s"
+msgstr "تماس از %s"
+
+msgid "Thank you for contacting %s"
+msgstr "از تماس با %s سپاسگزاریم"
+
+msgid "Dear %s,\n\n"
+msgstr "%s عزیز،\n\n"
+
+msgid "Thank you for contacting us. We have received your message and will get back to you as soon as possible.\n\n"
+msgstr "از تماس با ما سپاسگزاریم. پیام شما را دریافت کردیم و در اسرع وقت پاسخ خواهیم داد.\n\n"
+
+msgid "Your message:\n%s\n\n"
+msgstr "پیام شما:\n%s\n\n"
+
+msgid "Best regards,\n%s Team"
+msgstr "با احترام،\nتیم %s"
+
+msgid "Message sent successfully! We will contact you soon."
+msgstr "پیام با موفقیت ارسال شد! به زودی با شما تماس خواهیم گرفت."
+
+msgid "Failed to send message. Please try again."
+msgstr "ارسال پیام ناموفق بود. لطفاً دوباره تلاش کنید."
+
+msgid "Welcome to %s Newsletter"
+msgstr "به خبرنامه %s خوش آمدید"
+
+msgid "Thank you for subscribing to our newsletter!\n\n"
+msgstr "از عضویت در خبرنامه ما سپاسگزاریم!\n\n"
+
+msgid "You will receive updates about our latest articles, services, and special offers.\n\n"
+msgstr "شما به‌روزرسانی‌هایی در مورد آخرین مقالات، خدمات و پیشنهادات ویژه ما دریافت خواهید کرد.\n\n"
+
+msgid "Contact Submission"
+msgstr "پیام تماس"
+
+msgid "Newsletter Subscriber"
+msgstr "مشترک خبرنامه"
+
+msgid "Phone"
+msgstr "تلفن"
+
+msgid "Subscription Date"
+msgstr "تاریخ عضویت"
+
+msgid "IP Address"
+msgstr "آدرس IP"
+
+msgid "Hero Section"
+msgstr "بخش اصلی"
+
+msgid "Hero Title"
+msgstr "عنوان اصلی"
+
+msgid "Hero Subtitle"
+msgstr "زیرعنوان اصلی"
+
+msgid "Hero Description"
+msgstr "توضیحات اصلی"
+
+msgid "Hero Image"
+msgstr "تصویر اصلی"
+
+msgid "Trust Statistics"
+msgstr "آمار اعتماد"
+
+msgid "About Page Statistics"
+msgstr "آمار صفحه درباره"
+
+msgid "Theme Colors"
+msgstr "رنگ‌های قالب"
+
+msgid "Primary Color"
+msgstr "رنگ اصلی"
+
+msgid "Secondary Color"
+msgstr "رنگ ثانویه"
+
+msgid "Accent Color"
+msgstr "رنگ تأکیدی"
+
+msgid "TezNevisan Options"
+msgstr "تنظیمات تزنویسان"
+
+msgid "Social Media"
+msgstr "شبکه‌های اجتماعی"
+
+msgid "Pages:"
+msgstr "صفحات:"
+
+msgid "One comment on &ldquo;%s&rdquo;"
+msgstr "یک نظر برای &ldquo;%s&rdquo;"
+
+msgid "%1$s comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s نظر برای &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s نظر برای &ldquo;%2$s&rdquo;"
+
+msgid "&larr; Older Comments"
+msgstr "&larr; نظرات قدیمی‌تر"
+
+msgid "Newer Comments &rarr;"
+msgstr "نظرات جدیدتر &rarr;"
+
+msgid "Previous Post"
+msgstr "مطلب قبلی"
+
+msgid "Next Post"
+msgstr "مطلب بعدی"
+
+msgid "%d minute read"
+msgid_plural "%d minutes read"
+msgstr[0] "%d دقیقه مطالعه"
+msgstr[1] "%d دقیقه مطالعه"
