@@ -1,31 +1,43 @@
-<div class="service-card">
-    <div class="service-icon">
-        <i class="<?php echo esc_attr(get_field('service_icon') ?: 'fas fa-cog'); ?>"></i>
-    </div>
-    <div class="service-content">
-        <h3 class="service-title">
-            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        </h3>
-        <p class="service-description"><?php the_excerpt(); ?></p>
-        
-        <?php if (get_field('service_features')) : ?>
-            <ul class="service-features">
-                <?php foreach (array_slice(get_field('service_features'), 0, 4) as $feature) : ?>
-                    <li><i class="fas fa-check"></i> <?php echo esc_html($feature['feature_text']); ?></li>
-                <?php endforeach; ?>
-            </ul>
-        <?php endif; ?>
-        
-        <div class="service-footer">
-            <?php if (get_field('service_price')) : ?>
-                <div class="price-range">
-                    <i class="fas fa-tags"></i>
-                    <span><?php echo esc_html(get_field('service_price')); ?></span>
-                </div>
-            <?php endif; ?>
-            <a href="<?php the_permalink(); ?>" class="service-btn">
-                <?php _e('Learn More', 'teznevisan'); ?> <i class="fas fa-arrow-left"></i>
+<?php
+/**
+ * Service card template part.
+ *
+ * @package Teznevisan
+ */
+
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+$service_icon = get_post_meta(get_the_ID(), 'service_icon', true);
+$service_icon = is_string($service_icon) && $service_icon !== '' ? $service_icon : 'fas fa-cog';
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class('service-card'); ?>>
+    <?php if (has_post_thumbnail()) : ?>
+        <div class="service-image">
+            <a href="<?php echo esc_url(get_permalink()); ?>" aria-label="<?php echo esc_attr(sprintf(__('View %s', 'teznevisan'), get_the_title())); ?>">
+                <?php the_post_thumbnail('medium', array('loading' => 'lazy')); ?>
             </a>
         </div>
+    <?php endif; ?>
+
+    <div class="service-content">
+        <div class="service-icon" aria-hidden="true">
+            <i class="<?php echo esc_attr($service_icon); ?>"></i>
+        </div>
+
+        <h3 class="service-title">
+            <a href="<?php echo esc_url(get_permalink()); ?>"><?php echo esc_html(get_the_title()); ?></a>
+        </h3>
+
+        <div class="service-excerpt">
+            <?php the_excerpt(); ?>
+        </div>
+
+        <a class="service-link" href="<?php echo esc_url(get_permalink()); ?>">
+            <?php esc_html_e('Learn more', 'teznevisan'); ?>
+            <span aria-hidden="true">&larr;</span>
+        </a>
     </div>
-</div>
+</article>
