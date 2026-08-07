@@ -1,0 +1,180 @@
+/**
+ * Noscript & Legacy Browser Fallback Styles
+ * Handles display when JavaScript is disabled or SVG is unsupported
+ * @version 2.0.0
+ */
+
+/* ============================================
+   SVG Support Detection & Fallback Display
+   ============================================ */
+
+/* Hide SVG logos when JavaScript is disabled (no-js fallback) */
+html:not(.js-enabled) .logo-svg,
+html:not(.js-enabled) .mobile-logo-svg,
+html:not(.js-enabled) .footer-logo-svg {
+  display: none !important;
+}
+
+/* Hide SVG logos when SVG is not supported */
+html.no-svg .logo-svg,
+html.no-svg .mobile-logo-svg,
+html.no-svg .footer-logo-svg {
+  display: none !important;
+}
+
+/* Show fallback images when JavaScript is disabled or SVG unsupported */
+html:not(.js-enabled) .logo-image,
+html:not(.js-enabled) .mobile-logo,
+html:not(.js-enabled) .footer-logo-image,
+html.no-svg .logo-image,
+html.no-svg .mobile-logo,
+html.no-svg .footer-logo-image {
+  display: block !important;
+}
+
+/* ============================================
+   Base Logo Sizing (Desktop)
+   ============================================ */
+
+.logo-image,
+.logo-svg {
+  width: 154px;
+  height: 40px;
+  display: block;
+  object-fit: contain;
+}
+
+.mobile-logo,
+.mobile-logo-svg {
+  width: 120px;
+  height: 31px;
+  display: block;
+  object-fit: contain;
+}
+
+.footer-logo-image,
+.footer-logo-svg {
+  width: 50px;
+  height: 50px;
+  display: block;
+  object-fit: contain;
+}
+
+/* ============================================
+   SVG Rendering Optimization
+   ============================================ */
+
+.logo-svg,
+.mobile-logo-svg,
+.footer-logo-svg {
+  shape-rendering: geometricPrecision;
+  text-rendering: optimizeLegibility;
+  image-rendering: optimizeQuality;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Responsive Logo Sizing
+   ============================================ */
+
+/* Tablet: 768px - 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .logo-image,
+  .logo-svg {
+    width: 140px;
+    height: 36px;
+  }
+}
+
+/* Large Mobile: 576px - 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+  .logo-image,
+  .logo-svg {
+    width: 130px;
+    height: 34px;
+  }
+  
+  .mobile-logo,
+  .mobile-logo-svg {
+    width: 115px;
+    height: 30px;
+  }
+  
+  .footer-logo-image,
+  .footer-logo-svg {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Mobile: max 575px */
+@media (max-width: 575px) {
+  .logo-image,
+  .logo-svg {
+    width: 120px;
+    height: 31px;
+  }
+  
+  .mobile-logo,
+  .mobile-logo-svg {
+    width: 110px;
+    height: 28px;
+  }
+  
+  .footer-logo-image,
+  .footer-logo-svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Extra Small Mobile: max 375px */
+@media (max-width: 375px) {
+  .logo-image,
+  .logo-svg {
+    width: 110px;
+    height: 28px;
+  }
+  
+  .mobile-logo,
+  .mobile-logo-svg {
+    width: 100px;
+    height: 26px;
+  }
+}
+
+/* ============================================
+   Container Constraints
+   ============================================ */
+
+.site-branding,
+.mobile-menu-header,
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.site-header .site-branding .logo-svg,
+.site-header .site-branding .logo-image {
+  max-height: 48px;
+}
+
+/* ============================================
+   Accessibility & Print Styles
+   ============================================ */
+
+@media print {
+  .logo-svg,
+  .mobile-logo-svg,
+  .footer-logo-svg {
+    display: none !important;
+  }
+  
+  .logo-image,
+  .mobile-logo,
+  .footer-logo-image {
+    display: block !important;
+    filter: grayscale(100%);
+  }
+}

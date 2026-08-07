@@ -1,0 +1,173 @@
+/* ====================================
+   CRITICAL CSS - INLINE IN <HEAD>
+   ==================================== */
+
+/* Immediate theme colors - NO FLASH */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1FA640;
+    --bg-color: #ffffff;
+    --text-color: #111827;
+    --border-color: #e5e7eb;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-color: #f1f5f9;
+    --border-color: #334155;
+}
+
+/* Prevent layout shift */
+html { font-size: 16px; }
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    direction: rtl;
+}
+
+/* Header - prevent shift */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    min-height: 70px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Hero - prevent CLS */
+.page-hero {
+    min-height: 250px;
+    padding: 2rem 0;
+}
+
+/* Logo dimensions - prevent shift */
+.logo-image {
+    width: 154px;
+    height: 40px;
+}
+
+/* Loading state */
+body.loading * {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+}
+
+/* SVG rendering baseline */
+.logo-svg,
+.mobile-logo-svg,
+.footer-logo-svg {
+  display: block;
+  /* Improve SVG antialiasing */
+  shape-rendering: geometricPrecision;
+  text-rendering: optimizeLegibility;
+  image-rendering: optimizeQuality;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Default (desktop ≥1200px) */
+.site-branding .logo-svg {
+  width: 154px;
+  height: 40px; /* target aspect (3.85:1) */
+}
+.mobile-menu-header .mobile-logo-svg {
+  width: 120px;
+  height: 31px;
+}
+.footer-logo .footer-logo-svg {
+  width: 50px;
+  height: 50px; /* square in footer */
+}
+
+/* Tablet: 768px–1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .site-branding .logo-svg {
+    width: 140px;
+    height: 36px;
+  }
+}
+
+/* Large mobile: 576px–767px */
+@media (min-width: 576px) and (max-width: 767px) {
+  .site-branding .logo-svg {
+    width: 130px;
+    height: 34px;
+  }
+  .mobile-menu-header .mobile-logo-svg {
+    width: 115px;
+    height: 30px;
+  }
+  .footer-logo .footer-logo-svg {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Mobile ≤575px (iPhone 14 Pro Max target 430px) */
+@media (max-width: 575px) {
+  .site-branding .logo-svg {
+    width: 120px;
+    height: 31px; /* exact mobile spec */
+  }
+  .mobile-menu-header .mobile-logo-svg {
+    width: 110px;
+    height: 28px;
+  }
+  .footer-logo .footer-logo-svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Extra small ≤375px */
+@media (max-width: 375px) {
+  .site-branding .logo-svg {
+    width: 110px;
+    height: 28px;
+  }
+  .mobile-menu-header .mobile-logo-svg {
+    width: 100px;
+    height: 26px;
+  }
+}
+
+/* WebP fallback visibility for non-SVG environments (noscript path).
+   If a legacy browser fails to render <svg>, the noscript <img> is shown.
+   Ensure previous .logo-image/.mobile-logo/.footer-logo-image classes
+   maintain the same dimensions as their SVG counterparts for perfect matching. */
+.logo-image { width: 154px; height: 40px; display: block; }
+.mobile-logo { width: 120px; height: 31px; display: block; }
+.footer-logo-image { width: 50px; height: 50px; display: block; }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .logo-image { width: 140px; height: 36px; }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .logo-image { width: 130px; height: 34px; }
+  .mobile-logo { width: 115px; height: 30px; }
+  .footer-logo-image { width: 45px; height: 45px; }
+}
+@media (max-width: 575px) {
+  .logo-image { width: 120px; height: 31px; }
+  .mobile-logo { width: 110px; height: 28px; }
+  .footer-logo-image { width: 40px; height: 40px; }
+}
+@media (max-width: 375px) {
+  .logo-image { width: 110px; height: 28px; }
+  .mobile-logo { width: 100px; height: 26px; }
+}
+
+/* Optional: respect container height for sticky headers */
+.site-header .site-branding .logo-svg,
+.site-header .site-branding .logo-image {
+  max-height: 48px;
+}

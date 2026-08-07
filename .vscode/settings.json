@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^php -l \"C:\\\\Users\\\\Maziyar\\\\AppData\\\\Roaming\\\\Code\\\\User\\\\globalStorage\\\\github\\.remotehub\\\\d9ea8791ee8823d882d619c2207dccc6\\\\changestore\\\\vscode-vfs-github\\\\maziyarid\\\\TeznevisanTheme\\\\Teznevisan\\\\functions\\.php\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

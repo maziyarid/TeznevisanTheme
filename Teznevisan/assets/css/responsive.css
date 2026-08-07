@@ -1,0 +1,745 @@
+/**
+ * Responsive Styles - Complete Mobile Optimization
+ * Version: 3.0.0
+ */
+
+/* ====================================
+   LARGE DESKTOP (1400px+)
+   ==================================== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.5rem; }
+}
+
+/* ====================================
+   DESKTOP (1200px - 1399px)
+   ==================================== */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* ====================================
+   LAPTOP (992px - 1199px)
+   ==================================== */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .primary-menu > li > a {
+        padding: 0.75rem 0.875rem;
+        font-size: 14px;
+    }
+}
+
+/* ====================================
+   TABLET (768px - 991px)
+   ==================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+
+    /* Typography */
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.875rem; }
+    h3 { font-size: 1.5rem; }
+
+    /* Header */
+    :root {
+        --header-height: 65px;
+    }
+
+    .logo-svg,
+    .custom-logo-link img {
+        max-height: 45px;
+    }
+
+    /* Sections */
+    .section {
+        padding: 4rem 0;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ====================================
+   MOBILE LANDSCAPE (576px - 767px)
+   ==================================== */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+
+    /* Typography */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+
+    /* Header */
+    :root {
+        --header-height: 60px;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.625rem 1.25rem;
+        font-size: 15px;
+    }
+
+    /* Cards */
+    .card {
+        padding: 1.25rem;
+    }
+}
+
+/* ====================================
+   MOBILE PORTRAIT (< 576px)
+   ==================================== */
+@media (max-width: 575px) {
+    /* Container */
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Typography */
+    :root {
+        --font-size-base: 15px;
+    }
+
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    h4 { font-size: 1.125rem; }
+    h5 { font-size: 1rem; }
+    h6 { font-size: 0.9375rem; }
+
+    /* Header */
+    :root {
+        --header-height: 60px;
+    }
+
+    .header-inner {
+        gap: 0.5rem;
+    }
+
+    .action-btn {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1rem;
+    }
+
+    .telegram-login-btn span {
+        display: none;
+    }
+
+    .logo-svg,
+    .custom-logo-link img {
+        max-height: 40px;
+    }
+
+    /* Sections */
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.625rem 1rem;
+        font-size: 14px;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.25rem;
+        font-size: 16px;
+    }
+
+    /* Cards */
+    .card {
+        padding: 1rem;
+    }
+
+    /* Forms */
+    .form-control {
+        padding: 0.625rem 0.875rem;
+        font-size: 15px;
+    }
+
+    /* Modals */
+    .search-modal-content,
+    .telegram-login-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .search-modal-title {
+        font-size: 1.5rem;
+    }
+
+    .search-field {
+        padding: 0.875rem 3.5rem 0.875rem 1rem;
+        font-size: 15px;
+    }
+
+    .telegram-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    /* Accessibility Panel */
+    .accessibility-panel {
+        width: 90vw;
+        max-width: 300px;
+    }
+
+    /* Edge Panel */
+    .edge-panel {
+        bottom: 70px;
+        left: 0.5rem;
+    }
+
+    .edge-toggle,
+    .edge-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    /* Chaty */
+    .chaty-container {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .chaty-toggle {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.25rem;
+    }
+
+    .chaty-channel {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-main {
+        padding-bottom: 2rem;
+    }
+
+    .footer-bottom-inner {
+        gap: 1.5rem;
+    }
+
+    .footer-menu-list {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .newsletter-input-wrapper {
+        flex-direction: column;
+    }
+
+    .newsletter-input-wrapper button {
+        width: 100%;
+    }
+
+    /* Grid System */
+    .row {
+        margin: 0 -0.5rem;
+    }
+
+    .col {
+        padding: 0 0.5rem;
+    }
+
+    /* Spacing */
+    .mt-4, .mb-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+    .pt-4, .pb-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+}
+
+/* ====================================
+   EXTRA SMALL MOBILE (< 400px)
+   ==================================== */
+@media (max-width: 399px) {
+    /* Typography */
+    :root {
+        --font-size-base: 14px;
+    }
+
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.375rem; }
+    h3 { font-size: 1.125rem; }
+
+    /* Header */
+    .header-inner {
+        gap: 0.25rem;
+    }
+
+    .action-btn {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.875rem;
+    }
+
+    .logo-svg,
+    .custom-logo-link img {
+        max-height: 35px;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.5rem 0.875rem;
+        font-size: 13px;
+    }
+
+    /* Modals */
+    .search-modal-content,
+    .telegram-login-content,
+    .accessibility-panel {
+        padding: 1rem;
+    }
+
+    /* Edge Panel & Chaty */
+    .edge-toggle,
+    .edge-btn,
+    .chaty-toggle {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 0.875rem;
+    }
+
+    .chaty-channel {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+}
+
+/* ====================================
+   LANDSCAPE ORIENTATION
+   ==================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    /* Reduce vertical spacing */
+    .section {
+        padding: 2rem 0;
+    }
+
+    .page-header {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Modals */
+    .search-modal-content,
+    .telegram-login-content {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+        width: 60%;
+        max-width: 280px;
+    }
+
+    /* Edge Panel */
+    .edge-panel {
+        bottom: 1rem;
+    }
+}
+
+/* ====================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ==================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets */
+    .action-btn,
+    .menu-toggle,
+    .user-menu-toggle {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .primary-menu > li > a {
+        padding: 1rem;
+    }
+
+    .mobile-nav-menu > li > a,
+    .submenu-toggle {
+        min-height: 48px;
+    }
+
+    /* Remove hover effects */
+    .action-btn:hover,
+    .btn:hover,
+    .card:hover {
+        transform: none;
+    }
+
+    /* Improve tap feedback */
+    .action-btn:active,
+    .btn:active {
+        transform: scale(0.95);
+    }
+}
+
+/* ====================================
+   PRINT STYLES
+   ==================================== */
+@media print {
+    /* Hide non-printable elements */
+    .site-header,
+    .mobile-menu,
+    .mobile-menu-overlay,
+    .search-modal,
+    .telegram-login-modal,
+    .accessibility-panel,
+    .edge-panel,
+    .chaty-container,
+    .back-to-top-footer,
+    .no-print {
+        display: none !important;
+    }
+
+    /* Reset body */
+    body {
+        padding-top: 0 !important;
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    /* Optimize for print */
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* Links */
+    a {
+        text-decoration: underline;
+        color: #000;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+    }
+
+    /* Images */
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    /* Tables */
+    table {
+        page-break-inside: avoid;
+    }
+
+    /* Footer */
+    .site-footer {
+        page-break-before: always;
+    }
+}
+
+/* ====================================
+   HIGH DPI DISPLAYS (RETINA)
+   ==================================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Optimize images for retina */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+    /* Sharper borders */
+    .card,
+    .btn,
+    .form-control {
+        border-width: 0.5px;
+    }
+}
+
+/* ====================================
+   DARK MODE RESPONSIVE ADJUSTMENTS
+   ==================================== */
+@media (max-width: 767px) {
+    [data-theme="dark"] .mobile-menu {
+        background: var(--bg-color);
+    }
+
+    [data-theme="dark"] .search-modal-content,
+    [data-theme="dark"] .telegram-login-content {
+        background: var(--bg-color);
+    }
+}
+
+/* ====================================
+   ACCESSIBILITY - REDUCED MOTION
+   ==================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .animated {
+        animation: none !important;
+    }
+}
+
+/* ====================================
+   ACCESSIBILITY - HIGH CONTRAST
+   ==================================== */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #000;
+    }
+
+    .btn,
+    .card,
+    .form-control {
+        border-width: 2px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* ====================================
+   SPECIFIC COMPONENT RESPONSIVE FIXES
+   ==================================== */
+
+/* User Menu Dropdown - Mobile */
+@media (max-width: 575px) {
+    .user-menu-dropdown {
+        right: auto;
+        left: 0;
+        min-width: 200px;
+    }
+}
+
+/* Search Results - Mobile */
+@media (max-width: 575px) {
+    .search-results {
+        max-height: 250px;
+    }
+
+    .search-result-item {
+        padding: 0.75rem;
+    }
+
+    .search-result-item strong {
+        font-size: 0.9375rem;
+    }
+
+    .search-result-item p {
+        font-size: 0.8125rem;
+    }
+}
+
+/* Telegram Benefits - Mobile */
+@media (max-width: 575px) {
+    .telegram-benefits {
+        gap: 0.75rem;
+    }
+
+    .benefit-item {
+        font-size: 0.8125rem;
+    }
+
+    .benefit-item i {
+        font-size: 1rem;
+    }
+}
+
+/* Account Page - Mobile */
+@media (max-width: 575px) {
+    .user-avatar-large {
+        width: 80px;
+        height: 80px;
+    }
+
+    .user-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .account-nav-item {
+        padding: 0.875rem 1rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .stat-icon {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.25rem;
+    }
+}
+
+/* Newsletter Form - Mobile */
+@media (max-width: 575px) {
+    .newsletter-signup {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .newsletter-input-wrapper input {
+        padding: 0.625rem 0.875rem;
+        font-size: 14px;
+    }
+
+    .newsletter-input-wrapper button {
+        padding: 0.625rem 1rem;
+    }
+}
+
+/* Social Links - Mobile */
+@media (max-width: 575px) {
+    .footer-social,
+    .mobile-social {
+        justify-content: center;
+    }
+
+    .social-link {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1rem;
+    }
+}
+
+/* Toast Notifications - Mobile */
+@media (max-width: 575px) {
+    .teznevisan-toast {
+        top: 70px;
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+        padding: 0.875rem 1rem;
+        font-size: 14px;
+    }
+}
+
+/* Tooltips - Mobile */
+@media (max-width: 575px) {
+    .custom-tooltip {
+        font-size: 0.8125rem;
+        padding: 0.375rem 0.75rem;
+    }
+
+    .edge-btn[title]::after,
+    .chaty-channel .chaty-tooltip {
+        display: none;
+    }
+}
+
+/* Loading Spinner - Mobile */
+@media (max-width: 575px) {
+    .loading-spinner {
+        width: 0.875rem;
+        height: 0.875rem;
+    }
+}
+
+/* Badges - Mobile */
+@media (max-width: 575px) {
+    .badge {
+        font-size: 0.6875rem;
+        padding: 0.1875rem 0.625rem;
+    }
+}
+
+/* Alerts - Mobile */
+@media (max-width: 575px) {
+    .alert {
+        padding: 0.875rem 1rem;
+        font-size: 14px;
+    }
+
+    .alert i {
+        font-size: 1rem;
+    }
+}
+
+/* Progress Bar - Mobile */
+@media (max-width: 575px) {
+    .progress {
+        height: 0.375rem;
+    }
+}
+
+/* Tables - Mobile */
+@media (max-width: 767px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 0.5rem;
+        font-size: 14px;
+    }
+}
+
+/* Blockquote - Mobile */
+@media (max-width: 575px) {
+    blockquote {
+        margin: 1.5rem 0;
+        padding: 1rem;
+        font-size: 0.9375rem;
+    }
+}
+
+/* Code Blocks - Mobile */
+@media (max-width: 575px) {
+    pre {
+        padding: 0.75rem;
+        font-size: 13px;
+    }
+
+    code {
+        font-size: 0.8125em;
+    }
+}

@@ -39,6 +39,8 @@ foreach ($required_files as $file) {
  */
 class TeznevisanTheme {
     private static $instance = null;
+    private static $hooks_initialized = false;
+    private static $additional_hooks_registered = false;
     
     public static function getInstance(): self
     {
@@ -57,6 +59,10 @@ class TeznevisanTheme {
     
 private function initHooks(): void
 {
+    if (self::$hooks_initialized) {
+        return;
+    }
+    self::$hooks_initialized = true;
     // Core setup
     add_action('after_setup_theme', array($this, 'init'));
     add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
@@ -162,16 +168,21 @@ private function initHooks(): void
 
 private function register_additional_hooks(): void
 {
+    if (self::$additional_hooks_registered) {
+        return;
+    }
+    self::$additional_hooks_registered = true;
+
     // Additional hooks for enhanced functionality
     add_action('init', function () {
-        $theme = new TeznevisanTheme();
+        $theme = self::getInstance();
         $theme->disable_gutenberg();
         $theme->enhance_classic_editor();
     });
 
     // AJAX handlers for React editor
     add_action('wp_ajax_teznevisan_react_editor', function () {
-        $theme = new TeznevisanTheme();
+        $theme = self::getInstance();
         $theme->handle_react_editor_ajax();
     });
 
@@ -1036,7 +1047,6 @@ public function render_editor_settings_page(): void {
                 )
             );
         }
-            add_action('wp_enqueue_scripts', array($this, 'teznevisan_enqueue_header_enhancements'), 20);
     }
 
     /**
@@ -1215,69 +1225,6 @@ public function tez_enqueue_admin_assets($hook): void {
         wp_enqueue_style('tez-editor-fa', $theme_uri . '/assets/css/editor-fontawesome.css', array(), $ver);
     }
 }
-
-    /**
-     * Enqueue React Editor Assets
-     */
-    public function enqueue_react_editor_assets($hook): void {
-        if ($hook !== 'toplevel_page_teznevisan-react-editor') {
-            return;
-        }
-        
-        $theme_uri = get_template_directory_uri();
-        
-        // React core libraries
-        wp_enqueue_script(
-            'react', 
-            $theme_uri . '/assets/js/react/react.production.min.js', 
-            array(), 
-            '18.2.0', 
-            false
-        );
-        
-        wp_enqueue_script(
-            'react-dom', 
-            $theme_uri . '/assets/js/react/react-dom.production.min.js', 
-            array('react'), 
-            '18.2.0', 
-            false
-        );
-        
-        // Enqueue the built React editor component
-        if (file_exists(get_template_directory() . '/assets/js/dist/teznevisan-editor.umd.js')) {
-            wp_enqueue_script(
-                'teznevisan-react-editor',
-                $theme_uri . '/assets/js/dist/teznevisan-editor.umd.js',
-                array('react', 'react-dom'),
-                filemtime(get_template_directory() . '/assets/js/dist/teznevisan-editor.umd.js'),
-                true
-            );
-        }
-        
-        // Editor styles
-        if (file_exists(get_template_directory() . '/assets/css/react-editor.css')) {
-            wp_enqueue_style(
-                'teznevisan-react-editor-styles',
-                $theme_uri . '/assets/css/react-editor.css',
-                array('tez-main'),
-                filemtime(get_template_directory() . '/assets/css/react-editor.css')
-            );
-        }
-        
-        // Localize script for React editor
-        wp_localize_script('teznevisan-react-editor', 'TeznevisanEditorConfig', array(
-            'apiUrl' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('teznevisan_editor_nonce'),
-            'locale' => get_locale(),
-            'isRTL' => is_rtl(),
-            'settings' => array(
-                'fontawesome' => get_option('teznevisan_editor_fontawesome', true),
-                'persian_numbers' => get_option('teznevisan_editor_persian_numbers', true),
-                'templates' => get_option('teznevisan_editor_templates', true),
-                'autosave_interval' => get_option('teznevisan_autosave_interval', 30)
-            )
-        ));
-    }
 
 // CRITICAL: Admin FA7 enqueue with early priority
 public function tez_enqueue_admin_fontawesome($hook): void {
