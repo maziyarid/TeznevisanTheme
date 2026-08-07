@@ -1,206 +1,47 @@
-/*
- * TezNevisan Theme Fonts - OPTIMIZED VERSION
- * Version 2.1.0
- * Local font definitions with font-display optimization
- * Persian (IRANSans) support with fast loading
- */
+/* TeznevisanTheme font definitions. Paths are relative to assets/css/. */
+@import url('../fonts/fontawesome/css/all.css');
 
-/* Import the core Font Awesome CSS file */
-@import url('/assets/fonts/fontawesome/css/all.css');
-
-/* Font Awesome Local Font Face Definitions */
 @font-face {
-    font-family: "Font Awesome 7 Pro";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url("./assets/fonts/fontawesome/webfonts/fa-light-300.woff2") format("woff2"),
-         url("./assets/fonts/fontawesome/webfonts/fa-light-300.woff") format("woff");
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/iranSans/woff2/IRANSansWeb.woff2') format('woff2'),
+       url('../fonts/iranSans/woff/IRANSansWeb.woff') format('woff');
 }
 
 @font-face {
-    font-family: "Font Awesome 7 Pro";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("./assets/fonts/fontawesome/webfonts/fa-regular-400.woff2") format("woff2"),
-         url("./assets/fonts/fontawesome/webfonts/fa-regular-400.woff") format("woff");
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/iranSans/woff2/IRANSansWeb_Bold.woff2') format('woff2'),
+       url('../fonts/iranSans/woff/IRANSansWeb_Bold.woff') format('woff');
 }
 
 @font-face {
-    font-family: "Font Awesome 7 Pro";
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url("./assets/fonts/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"),
-         url("./assets/fonts/fontawesome/webfonts/fa-solid-900.woff") format("woff");
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/iranSans/woff2/IRANSansWeb_Medium.woff2') format('woff2'),
+       url('../fonts/iranSans/woff/IRANSansWeb_Medium.woff') format('woff');
 }
 
 @font-face {
-    font-family: "Font Awesome 7 Brands";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("./assets/fonts/fontawesome/webfonts/fa-brands-400.woff2") format("woff2"),
-         url("./assets/fonts/fontawesome/webfonts/fa-brands-400.woff") format("woff");
-}
-
-/* Ensure all Font Awesome icons use the correct font family */
-/* This baseline rule helps ensure the correct premium fonts are used. */
-.fa, [class*="fa-"] {
-    font-family: "Font Awesome 7 Pro", "Font Awesome 7 Brands", sans-serif;
-    font-weight: 400; /* Standard default for non-specific icons */
-}
-
-/* Specific styles for each font weight, with premium font family prioritized */
-.fas, .fa-solid {
-    font-family: "Font Awesome 7 Pro";
-    font-weight: 900;
-}
-
-.far, .fa-regular {
-    font-family: "Font Awesome 7 Pro";
-    font-weight: 400;
-}
-
-.fal, .fa-light {
-    font-family: "Font Awesome 7 Pro";
-    font-weight: 300;
-}
-
-.fab, .fa-brands {
-    font-family: "Font Awesome 7 Brands";
-    font-weight: 400;
-}
-
-
-/* ==========================================================================
-   IRANSANS FONT FAMILY - OPTIMIZED WITH FONT-DISPLAY: SWAP
-   ========================================================================== */
-
-@font-face {
-    font-family: IRANSans;
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url('../fonts/IRANSans/eot/IRANSansWeb_Black.eot');
-    src: url('../fonts/IRANSans/eot/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/IRANSans/woff2/IRANSansWeb_Black.woff2') format('woff2'),
-         url('../fonts/IRANSans/woff/IRANSansWeb_Black.woff') format('woff'),
-         url('../fonts/IRANSans/ttf/IRANSansWeb_Black.ttf') format('truetype');
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/iranSans/woff2/IRANSansWeb_Light.woff2') format('woff2'),
+       url('../fonts/iranSans/woff/IRANSansWeb_Light.woff') format('woff');
 }
 
 @font-face {
-    font-family: IRANSans;
-    font-style: normal;
-    font-weight: bold;
-    font-display: swap;
-    src: url('../fonts/IRANSans/eot/IRANSansWeb_Bold.eot');
-    src: url('../fonts/IRANSans/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/IRANSans/woff2/IRANSansWeb_Bold.woff2') format('woff2'),
-         url('../fonts/IRANSans/woff/IRANSansWeb_Bold.woff') format('woff'),
-         url('../fonts/IRANSans/ttf/IRANSansWeb_Bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: IRANSans;
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url('../fonts/IRANSans/eot/IRANSansWeb_Medium.eot');
-    src: url('../fonts/IRANSans/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/IRANSans/woff2/IRANSansWeb_Medium.woff2') format('woff2'),
-         url('../fonts/IRANSans/woff/IRANSansWeb_Medium.woff') format('woff'),
-         url('../fonts/IRANSans/ttf/IRANSansWeb_Medium.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: IRANSans;
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url('../fonts/IRANSans/eot/IRANSansWeb_Light.eot');
-    src: url('../fonts/IRANSans/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/IRANSans/woff2/IRANSansWeb_Light.woff2') format('woff2'),
-         url('../fonts/IRANSans/woff/IRANSansWeb_Light.woff') format('woff'),
-         url('../fonts/IRANSans/ttf/IRANSansWeb_Light.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: IRANSans;
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-    src: url('../fonts/IRANSans/eot/IRANSansWeb_UltraLight.eot');
-    src: url('../fonts/IRANSans/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/IRANSans/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'),
-         url('../fonts/IRANSans/woff/IRANSansWeb_UltraLight.woff') format('woff'),
-         url('../fonts/IRANSans/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: IRANSans;
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    src: url('../fonts/IRANSans/eot/IRANSansWeb.eot');
-    src: url('../fonts/IRANSans/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/IRANSans/woff2/IRANSansWeb.woff2') format('woff2'),
-         url('../fonts/IRANSans/woff/IRANSansWeb.woff') format('woff'),
-         url('../fonts/IRANSans/ttf/IRANSansWeb.ttf') format('truetype');
-}
-
-/* ==========================================================================
-   FONT FAMILY APPLICATION WITH FALLBACKS
-   ========================================================================== */
-
-body { 
-    font-family: "IRANSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-    direction: rtl;
-    text-align: right;
-}
-
-.nav > li > a { 
-    font-family: "IRANSans", -apple-system, BlinkMacSystemFont, sans-serif !important; 
-}
-
-h1, h2, h3, h4, h5, h6, .heading-font { 
-    font-family: "IRANSans", -apple-system, BlinkMacSystemFont, sans-serif !important; 
-}
-
-.alt-font { 
-    font-family: "IRANSans", -apple-system, BlinkMacSystemFont, sans-serif !important; 
-}
-
-/* ==========================================================================
-   FONT PERFORMANCE OPTIMIZATIONS
-   ========================================================================== */
-
-/* Preload most critical fonts */
-.font-preload-critical {
-    font-family: "IRANSans";
-    font-weight: normal;
-    font-display: swap;
-}
-
-/* Optimize font rendering */
-* {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-}
-
-/* Font loading class for better UX */
-.fonts-loading {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.fonts-loaded {
-    opacity: 1;
-}
-
-/* Prevent invisible text during font load */
-.font-fallback {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../fonts/iranSans/woff2/IRANSansWeb_Black.woff2') format('woff2'),
+       url('../fonts/iranSans/woff/IRANSansWeb_Black.woff') format('woff');
 }

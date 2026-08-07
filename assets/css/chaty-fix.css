@@ -1,157 +1,37 @@
-/**
- * Chaty Widget Fixes - Proper Styling
- * White background by default, brand color on hover
- */
-
-/* Hide any duplicate chaty widgets except the main one */
-.chaty-widget:not(#chaty-toggle),
-[id*="chaty"]:not(#chaty-toggle) {
-    display: none !important;
+/* Theme-owned floating contact widget. Do not hide the theme markup. */
+#chaty-widget,
+#chaty-channels {
+  box-sizing: border-box;
 }
 
-/* Main Chaty Widget Styling */
-#chaty-toggle {
-    position: fixed !important;
-    bottom: 100px !important;
-    right: 20px !important;
-    z-index: 9999 !important;
-    direction: rtl !important;
+#chaty-widget[hidden],
+#chaty-channels[hidden],
+#chaty-widget.is-hidden,
+#chaty-channels.is-hidden {
+  display: none !important;
 }
 
-/* Contact Items Base Styling */
-.chaty-contact-item {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 12px 8px !important;
-    margin: 8px 0 !important;
-    width: 70px !important;
-    min-height: 70px !important;
-    border-radius: 12px !important;
-    text-decoration: none !important;
-    transition: all 0.3s ease !important;
-    border: 2px solid #e0e0e0 !important;
-    font-family: 'IRANSans', Arial, sans-serif !important;
-    font-size: 11px !important;
-    font-weight: 600 !important;
-    line-height: 1.2 !important;
-    
-    /* Default state: white background, black text */
-    background-color: #ffffff !important;
-    color: #333333 !important;
+#chaty-widget:not([hidden]),
+#chaty-channels:not([hidden]) {
+  visibility: visible;
+  opacity: 1;
 }
 
-/* Contact Item Icons */
-.chaty-contact-item i,
-.chaty-contact-item .icon {
-    font-size: 24px !important;
-    margin-bottom: 6px !important;
-    transition: color 0.3s ease !important;
+#chaty-widget button,
+#chaty-widget a,
+#chaty-channels button,
+#chaty-channels a {
+  font: inherit;
 }
 
-/* Contact Labels */
-.chat-label {
-    margin-top: 6px !important;
-    font-size: 10px !important;
-    text-align: center !important;
-    font-weight: 600 !important;
-    color: inherit !important;
-    font-family: 'IRANSans', Arial, sans-serif !important;
-    line-height: 1.2 !important;
+#chaty-widget a,
+#chaty-channels a {
+  text-decoration: none;
 }
 
-/* Platform-specific icon colors (default state) */
-.chaty-contact-item[data-platform="whatsapp"] i {
-    color: #25D366 !important;
-}
-
-.chaty-contact-item[data-platform="telegram"] i {
-    color: #0088cc !important;
-}
-
-.chaty-contact-item[data-platform="phone"] i {
-    color: #4CAF50 !important;
-}
-
-.chaty-contact-item[data-platform="email"] i {
-    color: #EA4335 !important;
-}
-
-.chaty-contact-item[data-platform="instagram"] i {
-    color: #E4405F !important;
-}
-
-.chaty-contact-item[data-platform="facebook"] i {
-    color: #1877F2 !important;
-}
-
-.chaty-contact-item[data-platform="twitter"] i {
-    color: #1DA1F2 !important;
-}
-
-/* Hover states handled by JavaScript for proper color management */
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #chaty-toggle {
-        bottom: 80px !important;
-        right: 15px !important;
-    }
-    
-    .chaty-contact-item {
-        width: 60px !important;
-        min-height: 60px !important;
-        padding: 10px 6px !important;
-    }
-    
-    .chaty-contact-item i,
-    .chaty-contact-item .icon {
-        font-size: 20px !important;
-    }
-    
-    .chat-label {
-        font-size: 9px !important;
-    }
-}
-
-/* RTL Support */
-[dir="rtl"] #chaty-toggle {
-    right: 20px !important;
-    left: auto !important;
-}
-
-[dir="ltr"] #chaty-toggle {
-    left: 20px !important;
-    right: auto !important;
-}
-
-/* Ensure proper stacking */
-.chaty-contact-item {
-    position: relative !important;
-}
-
-/* Focus states for accessibility */
-.chaty-contact-item:focus {
-    outline: 3px solid #FFD700 !important;
-    outline-offset: 2px !important;
-}
-
-/* Animation for smooth transitions */
-.chaty-contact-item,
-.chaty-contact-item i,
-.chat-label {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-/* Remove any conflicting styles from other plugins */
-#chaty-toggle * {
-    box-sizing: border-box !important;
-}
-
-/* Ensure widget is always visible */
-#chaty-toggle {
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
+@media (max-width: 480px) {
+  #chaty-widget,
+  #chaty-channels {
+    max-width: calc(100vw - 2rem);
+  }
 }
