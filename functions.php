@@ -128,7 +128,7 @@ if (!function_exists('teznevisan_breadcrumbs')) {
     }
 }
 
-foreach (array('inc/classic-editor.php', 'inc/customizer.php', 'inc/navigation-manager.php', 'theme-helpers.php') as $module) {
+foreach (array('inc/classic-editor.php', 'inc/customizer.php', 'inc/navigation-manager.php') as $module) {
     $module_path = TEZNEVISAN_DIR . '/' . $module;
     if (file_exists($module_path)) require_once $module_path;
 }
