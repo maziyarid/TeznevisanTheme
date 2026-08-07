@@ -1,29 +1,26 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'node:path'
-import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vite';
+import path from 'node:path';
 
 export default defineConfig({
-  plugins: [react()],
+  root: '.',
+  base: './',
   build: {
-    outDir: 'dist',
-    emptyOutDir: true,
+    outDir: path.resolve(__dirname, 'assets/js/dist'),
+    emptyOutDir: false,
+    manifest: '.vite/manifest.json',
+    sourcemap: false,
     rollupOptions: {
-      input: {
-        main: resolve(process.cwd(), 'assets/js/main.ts'),
-        editor: resolve(process.cwd(), 'assets/js/react-editor/TeznevisanEditor.tsx'),
-        admin: resolve(process.cwd(), 'assets/js/admin.ts')
-      },
+      input: path.resolve(__dirname, 'assets/js/main.ts'),
       output: {
-        entryFileNames: 'js/[name]-[hash].js',
-        chunkFileNames: 'js/[name]-[hash].js',
-        assetFileNames: 'css/[name]-[hash].[ext]'
+        entryFileNames: 'main.js',
+        chunkFileNames: 'chunks/[name].js',
+        assetFileNames: 'assets/[name][extname]'
       }
     }
   },
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./assets/js', import.meta.url))
+      '@': path.resolve(__dirname, 'assets/js')
     }
   }
-})
+});
