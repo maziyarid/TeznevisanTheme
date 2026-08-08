@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-if (!defined('TEZNEVISAN_VERSION')) define('TEZNEVISAN_VERSION', '2.0.0');
+if (!defined('TEZNEVISAN_VERSION')) define('TEZNEVISAN_VERSION', '2.0.1');
 if (!defined('TEZNEVISAN_DIR')) define('TEZNEVISAN_DIR', get_template_directory());
 if (!defined('TEZNEVISAN_URI')) define('TEZNEVISAN_URI', get_template_directory_uri());
 
@@ -59,6 +59,7 @@ if (!function_exists('teznevisan_enqueue_assets')) {
     function teznevisan_enqueue_assets() {
         $styles = array(
             'teznevisan-fonts' => 'assets/css/fonts.css',
+            'teznevisan-fontawesome' => 'assets/fonts/fontawesome/css/all.css',
             'teznevisan-main' => 'assets/css/main.css',
             'teznevisan-mobile-menu' => 'assets/css/mobile-menu.css',
             'teznevisan-chaty' => 'assets/css/chaty-fix.css',
@@ -92,6 +93,14 @@ if (!function_exists('teznevisan_enqueue_assets')) {
     }
 }
 add_action('wp_enqueue_scripts', 'teznevisan_enqueue_assets', 20);
+
+if (!function_exists('teznevisan_print_footer_styles_fallback')) {
+    function teznevisan_print_footer_styles_fallback() {
+        if (did_action('wp_head')) return;
+        wp_print_styles();
+    }
+}
+add_action('wp_footer', 'teznevisan_print_footer_styles_fallback', 1);
 
 if (!function_exists('teznevisan_register_content_types')) {
     function teznevisan_register_content_types() {
