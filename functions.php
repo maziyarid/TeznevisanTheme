@@ -20,6 +20,18 @@ if (!function_exists('teznevisan_asset_version')) {
     }
 }
 
+if (!function_exists('teznevisan_reading_time_persian')) {
+    function teznevisan_reading_time_persian($post_id = 0) {
+        $post_id = $post_id ? (int) $post_id : get_the_ID();
+        $content = $post_id ? get_post_field('post_content', $post_id) : '';
+        $content = trim(wp_strip_all_tags(strip_shortcodes((string) $content)));
+        $words = $content === '' ? 0 : preg_split('/\s+/u', $content, -1, PREG_SPLIT_NO_EMPTY);
+        $count = is_array($words) ? count($words) : 0;
+        $minutes = max(1, (int) ceil($count / 200));
+        return sprintf('%d دقیقه مطالعه', $minutes);
+    }
+}
+
 if (!function_exists('teznevisan_setup')) {
     function teznevisan_setup() {
         add_theme_support('automatic-feed-links');
