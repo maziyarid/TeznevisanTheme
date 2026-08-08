@@ -9,17 +9,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-if (!defined('TEZNEVISAN_VERSION')) {
-    define('TEZNEVISAN_VERSION', '2.0.0');
-}
-
-if (!defined('TEZNEVISAN_DIR')) {
-    define('TEZNEVISAN_DIR', get_template_directory());
-}
-
-if (!defined('TEZNEVISAN_URI')) {
-    define('TEZNEVISAN_URI', get_template_directory_uri());
-}
+if (!defined('TEZNEVISAN_VERSION')) define('TEZNEVISAN_VERSION', '2.0.0');
+if (!defined('TEZNEVISAN_DIR')) define('TEZNEVISAN_DIR', get_template_directory());
+if (!defined('TEZNEVISAN_URI')) define('TEZNEVISAN_URI', get_template_directory_uri());
 
 if (!function_exists('teznevisan_asset_version')) {
     function teznevisan_asset_version($relative_path) {
@@ -30,7 +22,6 @@ if (!function_exists('teznevisan_asset_version')) {
 
 if (!function_exists('teznevisan_setup')) {
     function teznevisan_setup() {
-        load_theme_textdomain('teznevisan', TEZNEVISAN_DIR . '/languages');
         add_theme_support('automatic-feed-links');
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
@@ -84,10 +75,18 @@ if (!function_exists('teznevisan_enqueue_assets')) {
         if (is_singular('services') && file_exists(TEZNEVISAN_DIR . '/assets/css/services.css')) {
             wp_enqueue_style('teznevisan-services', TEZNEVISAN_URI . '/assets/css/services.css', array('teznevisan-main'), teznevisan_asset_version('assets/css/services.css'));
         }
-        foreach (array('mobile-menu', 'main', 'accessibility', 'chaty-fix') as $script) {
+
+        wp_enqueue_script('jquery');
+        $scripts = array(
+            'mobile-menu' => array(),
+            'main' => array('jquery'),
+            'accessibility' => array('jquery'),
+            'chaty-fix' => array('jquery'),
+        );
+        foreach ($scripts as $script => $dependencies) {
             $path = 'assets/js/' . $script . '.js';
             if (file_exists(TEZNEVISAN_DIR . '/' . $path)) {
-                wp_enqueue_script('teznevisan-' . sanitize_key($script), TEZNEVISAN_URI . '/' . $path, array(), teznevisan_asset_version($path), true);
+                wp_enqueue_script('teznevisan-' . sanitize_key($script), TEZNEVISAN_URI . '/' . $path, $dependencies, teznevisan_asset_version($path), true);
             }
         }
     }
